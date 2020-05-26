@@ -5,7 +5,7 @@
   "background_color": "#3E4EB8",
   "display": "standalone",
   "orientation": "portrait",
-  "start_url": "index.html",
+  "start_url": "https://grkm.github.io/Lihkab-Ucret-Hesaplama/index.html",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",
