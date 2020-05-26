@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="tr">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#FFE1C4">
+    <!-- Bootstrap CSS -->
+    <link rel="icon" href="./icon-384x384.png">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./css/jquery-3.4.0.slim.min.js"></script>
+    <script src="./css/bootstrap.js"></script>
+    <script src="./css/popper.min.js"></script>
+    <script src="./css/tooltip.min.js"></script>
+    <!--<link rel="stylesheet" href="./css/style.css">-->
+    <link rel="manifest" href="manifest.json">
+    <title>Lihkab Ücret Hesaplama</title>
+</head>
+
+<body data-gr-c-s-loaded="true" style="
+    background: #292727; !important">
+    <!-- start body -->
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+                <div class="card card-signin my-5">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Görkem Tabak</h5>
+                        <h3 class="login-heading mb-4 text-center">Lihkab Ücret Hesaplama</h3>
+                        <form method="post">
+                            <div class="form-label-group">
+                                <input type="number" id="brut" name="brut" class="form-control"
+                                    placeholder="Brüt Ücret" required autofocus>
+                                <label for="brut">Brüt Ücret</label>
+                            </div>
+							
+							<div class="custom-control custom-checkbox mb-3">
+                                <input type="checkbox" name="kontrollukKontrol" class="custom-control-input"
+                                    id="kontrollukKontrol">
+                                <label class="custom-control-label" for="kontrollukKontrol">Kontrollük Ekle</label>
+                            </div>
+
+                            <div class="form-label-group">
+                                <input type="number" id="yol" name="yol" class="form-control"
+                                    placeholder="Yol Ücreti" required autofocus>
+                                <label for="yol">Yol Ücreti</label>
+                            </div>
+
+                            <div class="custom-control custom-checkbox mb-3">
+                                <input type="checkbox" name="stopajKontrol" class="custom-control-input"
+                                    id="stopajKontrol">
+                                <label class="custom-control-label" for="stopajKontrol">Stopajlı Ücret Hesapla</label>
+                            </div>
+                            <input type="button" class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" value="Hesapla" name="btnHesapla" id="btnHesapla">
+                        </form>
+						<h3 class="text-center"><div id="sonuc"></div></h3>
+						<h4 class="text-center"><div id="faturaverileri"></div></h4>
+							<div style="text-align: center;">
+								<div id="brutson"></div>
+								<div id="stopaj"></div>
+								<div id="kdv"></div>
+								<div id="brutkdv"></div>
+							</div>
+						<h4 class="text-center"><div id="digerveriler"></div></h4>
+							<div style="text-align: center;">
+								<div id="yolson"></div>
+								<div id="belge"></div>
+								<div id="kontrolluk"></div>
+								<div id="kontrolluktoplam"></div>
+								<div id="damgaonay"></div>
+								<div id="sozlesmebedeli"></div>
+							</div>
+						<div id="brutson"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end body -->
+    <script src="./js/app.js"></script>
+	
+	<script type="text/javascript">
+		var btn=document.getElementById("btnHesapla");
+		btn.onclick=function(){
+		var brut=Number(document.getElementById("brut").value);
+		var yol=Number(document.getElementById("yol").value);
+		var kdv=brut*0.18;
+		var brutkdv=brut+kdv;
+		var damgaonay =  brut*0.00948;
+		var sozlesmebedeli = 8.5;
+		var blg = brutkdv*0.05;
+		var knt = brutkdv*0.05;
+		var kontrollukdurum = document.getElementById("kontrollukKontrol");
+			if (kontrollukdurum.checked == false){
+				var kontrolluk = (brutkdv)*0.05;
+				document.getElementById('kontrolluk').innerHTML="Kontrollük : "+"0";
+				}
+			else {
+				var kontrolluk = (brutkdv)*0.10;
+				document.getElementById('kontrolluk').innerHTML="Kontrollük : "+knt;
+				}
+		var stopajdurum = document.getElementById("stopajKontrol");
+			if (stopajdurum.checked == false){
+				var stopaj = 0;
+				}
+			else {
+				var stopaj = brut*0.2;
+				brutkdv=brut+kdv-stopaj;
+				}
+		var toplam=brut+kdv+kontrolluk-stopaj+yol+sozlesmebedeli+damgaonay;
+		document.getElementById('sonuc').innerHTML="Sonuç : "+toplam;
+		document.getElementById('brutson').innerHTML="Brüt : "+brut;
+		document.getElementById('kdv').innerHTML="Kdv : "+kdv;
+		document.getElementById('belge').innerHTML="Belge Alımı : "+blg;
+		document.getElementById('kontrolluktoplam').innerHTML="Harç Toplam : "+kontrolluk;
+		document.getElementById('stopaj').innerHTML="Stopaj : "+stopaj;
+		document.getElementById('brutkdv').innerHTML="Net : "+brutkdv;
+		document.getElementById('damgaonay').innerHTML="Onay+Damga : "+damgaonay;
+		document.getElementById('sozlesmebedeli').innerHTML="Sözl. Bedeli : "+sozlesmebedeli;
+		document.getElementById('yolson').innerHTML="Yol : "+yol;
+		document.getElementById('faturaverileri').innerHTML="~ Fatura Verileri ~";
+		document.getElementById('digerveriler').innerHTML="~ Diğer Veriler ~";
+		}
+	</script>
+	
+</body>
+
+</html>
