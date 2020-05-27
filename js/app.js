@@ -1,5 +1,5 @@
 if ('serviceWorker' in navigator){
-  navigator.serviceWorker.register('/sw.js').then(function(registration){
+  navigator.serviceWorker.register('./sw.js').then(function(registration){
     console.log('service worker registration succeeded:',registration);
   },
 function(error){
@@ -10,7 +10,7 @@ else{
   console.log('service workers are not supported.');
 }
 
-navigator.serviceWorker.register('/sw.js').then(reg => {
+navigator.serviceWorker.register('./sw.js').then(reg => {
 	reg.update();
 	reg.installing; // the installing worker, or undefined
 	reg.waiting; // the waiting worker, or undefined
