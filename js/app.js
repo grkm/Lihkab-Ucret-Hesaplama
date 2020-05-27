@@ -5,7 +5,7 @@ if ('serviceWorker' in navigator) {
 		.catch(err => console.log('service worker not registered', err));
 }
 
-navigator.serviceWorker.register('sw.js').then(reg => {
+navigator.serviceWorker.register('/sw.js').then(reg => {
 	reg.update();
 	reg.installing; // the installing worker, or undefined
 	reg.waiting; // the waiting worker, or undefined
