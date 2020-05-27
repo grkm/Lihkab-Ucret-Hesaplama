@@ -117,7 +117,7 @@
 				brutkdv=brut+kdv-stopaj;
 				}
 		var toplam=brut+kdv+kontrolluk-stopaj+yol+sozlesmebedeli+damgaonay;
-			toplam = Number(toplam.toFixed(2));
+			toplam = yuvarla(toplam, 2);
 		document.getElementById('sonuc').innerHTML="Sonuç : "+toplam;
 		document.getElementById('brutson').innerHTML="Brüt : "+brut;
 		document.getElementById('kdv').innerHTML="Kdv : "+kdv;
@@ -132,6 +132,11 @@
 		document.getElementById('digerveriler').innerHTML="~ Diğer Veriler ~";
 		}
 	</script>
+<script type="text/javascript">
+function yuvarla(sayi, hane{
+    return Number(Math.round(sayi+'e'+hane)+'e-'+hane);
+}
+</script>
 	
 </body>
 
