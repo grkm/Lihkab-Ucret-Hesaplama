@@ -91,16 +91,19 @@
 			kdv = Number(kdv.toFixed(2));
 		var brutkdv=brut+kdv;
 		var damgaonay =  brut*0.00948;
+			damgaonay = Number(damgaonay.toFixed(2));
 		var sozlesmebedeli = 8.5;
 		var blg = brutkdv*0.05;
+			blg = Number(blg.toFixed(2));
 		var knt = brutkdv*0.05;
+			knt = Number(knt.toFixed(2));
 		var kontrollukdurum = document.getElementById("kontrollukKontrol");
 			if (kontrollukdurum.checked == false){
-				var kontrolluk = (brutkdv)*0.05;
+				var kontrolluk = blg;
 				document.getElementById('kontrolluk').innerHTML="Kontrollük : "+"0";
 				}
 			else {
-				var kontrolluk = (brutkdv)*0.10;
+				var kontrolluk = blg+knt;
 				document.getElementById('kontrolluk').innerHTML="Kontrollük : "+knt;
 				}
 		var stopajdurum = document.getElementById("stopajKontrol");
@@ -109,6 +112,7 @@
 				}
 			else {
 				var stopaj = brut*0.2;
+				stopaj = Number(stopaj.toFixed(2));
 				brutkdv=brut+kdv-stopaj;
 				}
 		var toplam=brut+kdv+kontrolluk-stopaj+yol+sozlesmebedeli+damgaonay;
