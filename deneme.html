@@ -48,52 +48,7 @@
         <div class="card">
           <div class="card-header" id="headingOne">
             <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-				<div class="card-body">
-					<h3 class="login-heading mb-4 text-center">Lihkab Ücret Hesabı</h3>
-								<form method="post">
-									<div class="form-label-group">
-										<input type="number" id="brut" name="brut" class="form-control"
-											placeholder="Brüt Ücret" required autofocus>
-										<label for="brut">Brüt Ücret</label>
-									</div>
-						<div class="custom-control custom-checkbox mb-3">
-										<input type="checkbox" name="kontrollukKontrol" class="custom-control-input"
-											id="kontrollukKontrol">
-										<label class="custom-control-label" for="kontrollukKontrol">Kontrollük Ekle</label>
-									</div>
-		
-									<div class="form-label-group">
-										<input type="number" id="yol" name="yol" class="form-control"
-											placeholder="Yol Ücreti" required autofocus>
-										<label for="yol">Yol Ücreti</label>
-									</div>
-		
-									<div class="custom-control custom-checkbox mb-3">
-										<input type="checkbox" name="stopajKontrol" class="custom-control-input"
-											id="stopajKontrol">
-										<label class="custom-control-label" for="stopajKontrol">Stopajlı Ücret Hesapla</label>
-									</div>
-									<input type="button" class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" value="Hesapla" name="btnHesapla" id="btnHesapla">
-								</form>
-								<h3 class="text-center"><div id="sonuc"></div></h3>
-								<h4 class="text-center"><div id="faturaverileri"></div></h4>
-									<div style="text-align: center;">
-										<div id="brutson"></div>
-										<div id="stopaj"></div>
-										<div id="kdv"></div>
-										<div id="brutkdv"></div>
-									</div>
-								<h4 class="text-center"><div id="digerveriler"></div></h4>
-									<div style="text-align: center;">
-										<div id="yolson"></div>
-										<div id="belge"></div>
-										<div id="kontrolluk"></div>
-										<div id="kontrolluktoplam"></div>
-										<div id="damgaonay"></div>
-										<div id="sozlesmebedeli"></div>
-									</div>
-								<div id="brutson"></div>
-							</div>
+              İşlem Ücreti Hesabı
             </button>
           </div>
 
@@ -101,9 +56,51 @@
             <div class="card-body">
               <!-- Ücret Hesaplama Kısmı Başlangıç -->
               <div class="card-body">
-              </div>
-              <h6 class="text-center">2020 ~ <a href="https://gorkemtabak.blogspot.com">Görkem Tabak</a></h6>
-              <h6 class="text-center">gorkemtabak@gmail.com</h6>
+				<h3 class="login-heading mb-4 text-center">Lihkab Ücret Hesabı</h3>
+							<form method="post">
+								<div class="form-label-group">
+									<input type="number" id="brut" name="brut" class="form-control"
+										placeholder="Brüt Ücret" required autofocus>
+									<label for="brut">Brüt Ücret</label>
+								</div>
+					<div class="custom-control custom-checkbox mb-3">
+									<input type="checkbox" name="kontrollukKontrol" class="custom-control-input"
+										id="kontrollukKontrol">
+									<label class="custom-control-label" for="kontrollukKontrol">Kontrollük Ekle</label>
+								</div>
+	
+								<div class="form-label-group">
+									<input type="number" id="yol" name="yol" class="form-control"
+										placeholder="Yol Ücreti" required autofocus>
+									<label for="yol">Yol Ücreti</label>
+								</div>
+	
+								<div class="custom-control custom-checkbox mb-3">
+									<input type="checkbox" name="stopajKontrol" class="custom-control-input"
+										id="stopajKontrol">
+									<label class="custom-control-label" for="stopajKontrol">Stopajlı Ücret Hesapla</label>
+								</div>
+								<input type="button" class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" value="Hesapla" name="btnHesapla" id="btnHesapla">
+							</form>
+							<h3 class="text-center"><div id="sonuc"></div></h3>
+							<h4 class="text-center"><div id="faturaverileri"></div></h4>
+								<div style="text-align: center;">
+									<div id="brutson"></div>
+									<div id="stopaj"></div>
+									<div id="kdv"></div>
+									<div id="brutkdv"></div>
+								</div>
+							<h4 class="text-center"><div id="digerveriler"></div></h4>
+								<div style="text-align: center;">
+									<div id="yolson"></div>
+									<div id="belge"></div>
+									<div id="kontrolluk"></div>
+									<div id="kontrolluktoplam"></div>
+									<div id="damgaonay"></div>
+									<div id="sozlesmebedeli"></div>
+								</div>
+							<div id="brutson"></div>
+						</div>
               <!-- Ücret Hesaplama Kısmı Son -->
             </div>
           </div>
