@@ -21,11 +21,11 @@ function islemucreti(brut, kontrollukdurum, stopajdurum, yol) {
     kontrollukdurum = document.getElementById("kontrollukKontrol");
     if (kontrollukdurum.checked == false){
         var kontrolluk = blg;
-        document.getElementById('kontrolluk').innerHTML="Kontrollük : "+"0";
+        document.getElementById('kontrolluk').innerHTML="0";
     }
     else {
         var kontrolluk = blg+knt;
-        document.getElementById('kontrolluk').innerHTML="Kontrollük : "+knt;
+        document.getElementById('kontrolluk').innerHTML=knt;
     }
 
     //Stopaj durumuna göre hesaplama yapılıyor
