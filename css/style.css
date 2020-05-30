@@ -179,23 +179,3 @@ body {
     text-decoration: none;
     text-align: center;
   }
-
-  .accordion > .card > .card-header > .btn-link {
-    font-weight: 400;
-    color: #333333;
-    text-decoration: none;
-  }
-  
-  .accordion > .card > .card-header > .btn-link:hover {
-    color: #222222;
-    text-decoration: underline;
-  }
-  
-  .accordion > .card > .card-header > .btn-link:focus, .btn-link.focus {
-    text-decoration: underline;
-  }
-  
-  .accordion > .card > .card-header > .btn-link:disabled, .btn-link.disabled {
-    color: #6c757d;
-    pointer-events: none;
-  }
