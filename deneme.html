@@ -81,7 +81,56 @@
 								</div>
 								<input type="button" onclick="islemucreti();" class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" value="Hesapla" name="btnHesapla" id="btnHesapla">
 							</form>
-							<h3 class="text-center" style="margin-top:10px;"><div id="sonuc"></div></h3>
+							<!--Hesaplama İşlemi Sonrası Sonuçların Gösterimi BAŞLANGIÇ-->
+							<button class="btn btn-info btn-block" data-toggle="collapse" data-target="#demo" aria-expanded="true" aria-controls="demo">Sonuçları Gizle/Göster</button>
+								<div id="demo" class="collapse show">
+									<!--Table Çalışması Deneme Başlangıç-->
+									<table class="table table-hover text-center" style="margin-top:20px; table-layout:fixed;">
+										<thead>
+										<tr>
+											<td colspan="2">Sonuç :</td>
+											<td colspan="2"><div id="sonuc"></div></td>
+										</tr>
+										</thead>
+										<tbody>
+											<tr>
+											<td colspan="4">Fatura Verileri</td>
+											</tr>
+										</tbody>
+										<tbody>
+										<tr>
+											<td colspan="2">Brüt Ücret :</td>
+											<td colspan="2"><div id="brutson"></div></td>
+										</tr>
+										</tbody>
+										<tbody>
+											<tr>
+												<td colspan="2">Stopaj :</td>
+												<td colspan="2"><div id="stopaj"></div></td>
+											</tr>
+										</tbody>
+										<tbody>
+											<tr>
+												<td colspan="2">Kdv :</td>
+												<td colspan="2"><div id="kdv"></div></td>
+											</tr>
+										</tbody>
+										<tbody>
+											<tr>
+												<td colspan="2">Net :</td>
+												<td colspan="2"><div id="brutkdv"></div></td>
+											</tr>
+										</tbody>
+									</table>
+									<!--Table Çalışması Deneme Son-->
+								</div>
+							<!--İşlem Sonucu Gösterimi-->
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<h3 class="text-center" style="margin-top:20px;"><div id="sonuc"></div></h3>
+								</div>
+							  </div>
+							<!--Fatura Verileri Gösterimi-->
 							<h4 class="text-center"><div id="faturaverileri"></div></h4>
 								<div style="text-align: center;">
 									<div id="brutson"></div>
@@ -89,6 +138,7 @@
 									<div id="kdv"></div>
 									<div id="brutkdv"></div>
 								</div>
+							<!--Diğer Veriler Gösterimi-->
 							<h4 class="text-center"><div id="digerveriler"></div></h4>
 								<div style="text-align: center;">
 									<div id="yolson"></div>
@@ -98,7 +148,7 @@
 									<div id="damgaonay"></div>
 									<div id="sozlesmebedeli"></div>
 								</div>
-							<div id="brutson"></div>
+							<!--Hesaplama İşlemi Sonrası Sonuçların Gösterimi SON-->
 						</div>
               <!-- Ücret Hesaplama Kısmı Son -->
             </div>
@@ -164,7 +214,7 @@
     <!-- end body -->
 	<script src="./js/app.js"></script>
 	<script src="./js/hesaplamalar.js"></script>
-	
+
 </body>
 
 </html>
