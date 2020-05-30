@@ -176,3 +176,9 @@ body {
     -o-background-size: cover;
     background-size: cover;
 }
+
+.accordion > .card {
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+  }
