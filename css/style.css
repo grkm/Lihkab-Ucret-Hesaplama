@@ -52,7 +52,8 @@ body {
     padding: var(--input-padding-y) var(--input-padding-x);
 }
 
-.form-label-group>label {
+
+.form-label-group> label {
     position: absolute;
     top: 0;
     left: 0;
