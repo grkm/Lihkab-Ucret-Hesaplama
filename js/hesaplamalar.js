@@ -40,6 +40,7 @@ function islemucreti(brut, kontrollukdurum, stopajdurum, yol) {
     }
 
     //Değişkenlere göre işlem ücreti hesaplanıyor
+    var toplamek=kontrolluk+yol+damgaonay+sozlesmebedeli;
     var toplam=brut+kdv+kontrolluk-stopaj+yol+sozlesmebedeli+damgaonay;
     toplam = yuvarla(toplam, 2);
 
@@ -54,4 +55,5 @@ function islemucreti(brut, kontrollukdurum, stopajdurum, yol) {
     document.getElementById('damgaonay').innerHTML=damgaonay;
     document.getElementById('sozlesmebedeli').innerHTML=sozlesmebedeli;
     document.getElementById('yolson').innerHTML=yol;
+    document.getElementById('toplamek').innerHTML=toplamek;
 }
