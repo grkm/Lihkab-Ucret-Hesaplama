@@ -31,7 +31,7 @@ function islemucreti(brut, kontrollukdurum, stopajdurum, yol) {
     //Stopaj durumuna göre hesaplama yapılıyor
     stopajdurum = document.getElementById("stopajKontrol");
     if (stopajdurum.checked == false){
-        
+        var stopaj = 0;
     }
     else {
         var stopaj = brut*0.2;
