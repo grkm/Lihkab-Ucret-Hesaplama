@@ -157,16 +157,6 @@ body {
     color: #777;
 }
 
-.btn-google {
-    color: white;
-    background-color: #ea4335;
-}
-
-.btn-facebook {
-    color: white;
-    background-color: #3b5998;
-}
-
 .carousel-item {
     height: 65vh;
     min-height: 350px;
@@ -181,4 +171,31 @@ body {
     overflow: hidden;
     border-radius: 1rem;
     box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .accordion > .card > .card-header {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  .accordion > .card > .card-header > .btn-link {
+    font-weight: 400;
+    color: #333333;
+    text-decoration: none;
+  }
+  
+  .accordion > .card > .card-header > .btn-link:hover {
+    color: #222222;
+    text-decoration: underline;
+  }
+  
+  .accordion > .card > .card-header > .btn-link:focus, .btn-link.focus {
+    text-decoration: underline;
+  }
+  
+  .accordion > .card > .card-header > .btn-link:disabled, .btn-link.disabled {
+    color: #6c757d;
+    pointer-events: none;
   }
