@@ -44,16 +44,14 @@ function islemucreti(brut, kontrollukdurum, stopajdurum, yol) {
     toplam = yuvarla(toplam, 2);
 
     //Sonuçların ekrana yazdırılması kısmı
-    document.getElementById('sonuc').innerHTML="Sonuç : "+toplam;
-    document.getElementById('brutson').innerHTML="Brüt : "+brut;
-    document.getElementById('kdv').innerHTML="Kdv : "+kdv;
-    document.getElementById('belge').innerHTML="Belge Alımı : "+blg;
-    document.getElementById('kontrolluktoplam').innerHTML="Harç Toplam : "+kontrolluk;
-    document.getElementById('stopaj').innerHTML="Stopaj : "+stopaj;
-    document.getElementById('brutkdv').innerHTML="Net : "+brutkdv;
-    document.getElementById('damgaonay').innerHTML="Onay+Damga : "+damgaonay;
-    document.getElementById('sozlesmebedeli').innerHTML="Sözl. Bedeli : "+sozlesmebedeli;
-    document.getElementById('yolson').innerHTML="Yol : "+yol;
-    document.getElementById('faturaverileri').innerHTML="~ Fatura Verileri ~";
-    document.getElementById('digerveriler').innerHTML="~ Diğer Veriler ~";
+    document.getElementById('sonuc').innerHTML=toplam;
+    document.getElementById('brutson').innerHTML=brut;
+    document.getElementById('kdv').innerHTML=kdv;
+    document.getElementById('belge').innerHTML=blg;
+    document.getElementById('kontrolluktoplam').innerHTML=kontrolluk;
+    document.getElementById('stopaj').innerHTML=stopaj;
+    document.getElementById('brutkdv').innerHTML=brutkdv;
+    document.getElementById('damgaonay').innerHTML=damgaonay;
+    document.getElementById('sozlesmebedeli').innerHTML=sozlesmebedeli;
+    document.getElementById('yolson').innerHTML=yol;
 }
