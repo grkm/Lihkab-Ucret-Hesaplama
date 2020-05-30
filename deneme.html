@@ -84,69 +84,89 @@
 							<!--Hesaplama İşlemi Sonrası Sonuçların Gösterimi BAŞLANGIÇ-->
 							<button class="btn btn-info btn-block" data-toggle="collapse" data-target="#demo" aria-expanded="true" aria-controls="demo">Sonuçları Gizle/Göster</button>
 								<div id="demo" class="collapse show">
-									<!--Table Çalışması Deneme Başlangıç-->
-									<table class="table table-hover text-center" style="margin-top:20px; table-layout:fixed;">
-										<thead>
-										<tr>
-											<td colspan="2">Sonuç :</td>
-											<td colspan="2"><div id="sonuc"></div></td>
-										</tr>
-										</thead>
-										<tbody>
-											<tr>
-											<td colspan="4">Fatura Verileri</td>
-											</tr>
-										</tbody>
+									<!--Tablo Başlangıç-->
+									<table class="table table-hover" style="margin-top:40px; table-layout:fixed;">
+										<!--İşlem Sonucu Gösterimi-->
 										<tbody>
 										<tr>
-											<td colspan="2">Brüt Ücret :</td>
-											<td colspan="2"><div id="brutson"></div></td>
+											<td colspan="2" class="text-right font-italic">Sonuç :</td>
+											<td colspan="2" class="text-left font-weight-bold"><div id="sonuc"></div></td>
+										</tr>
+										</tbody>
+										<!--Fatura Verileri Gösterimi-->
+										<tbody>
+											<tr>
+											<td colspan="4" class="text-center font-weight-bold">~ Fatura Verileri ~</td>
+											</tr>
+										</tbody>
+										<tbody>
+										<tr>
+											<td colspan="2" class="text-right font-italic">Brüt Ücret :</td>
+											<td colspan="2" class="text-left font-weight-bold"><div id="brutson"></div></td>
 										</tr>
 										</tbody>
 										<tbody>
 											<tr>
-												<td colspan="2">Stopaj :</td>
-												<td colspan="2"><div id="stopaj"></div></td>
+												<td colspan="2" class="text-right font-italic">Stopaj :</td>
+												<td colspan="2" class="text-left font-weight-bold"><div id="stopaj"></div></td>
 											</tr>
 										</tbody>
 										<tbody>
 											<tr>
-												<td colspan="2">Kdv :</td>
-												<td colspan="2"><div id="kdv"></div></td>
+												<td colspan="2" class="text-right font-italic">Kdv :</td>
+												<td colspan="2" class="text-left font-weight-bold"><div id="kdv"></div></td>
 											</tr>
 										</tbody>
 										<tbody>
 											<tr>
-												<td colspan="2">Net :</td>
-												<td colspan="2"><div id="brutkdv"></div></td>
+												<td colspan="2" class="text-right font-italic">Net :</td>
+												<td colspan="2" class="text-left font-weight-bold"><div id="brutkdv"></div></td>
+											</tr>
+										</tbody>
+										<!--Diğer Veriler Gösterimi-->
+										<tbody>
+											<tr>
+											<td colspan="4" class="text-center font-weight-bold">~ Diğer Veriler ~</td>
+											</tr>
+										</tbody>
+										<tbody>
+											<tr>
+												<td colspan="2" class="text-right font-italic">Mahalle Ücreti :</td>
+												<td colspan="2" class="text-left font-weight-bold"><div id="yolson"></div></td>
+											</tr>
+										</tbody>
+										<tbody>
+											<tr>
+												<td colspan="2" class="text-right font-italic">Belge Alımı :</td>
+												<td colspan="2" class="text-left font-weight-bold"><div id="belge"></div></td>
+											</tr>
+										</tbody>
+										<tbody>
+											<tr>
+												<td colspan="2" class="text-right font-italic">Kontrollük :</td>
+												<td colspan="2" class="text-left font-weight-bold"><div id="kontrolluk"></div></td>
+											</tr>
+										</tbody>
+										<tbody>
+											<tr>
+												<td colspan="2" class="text-right font-italic">Harç Toplam :</td>
+												<td colspan="2" class="text-left font-weight-bold"><div id="kontrolluktoplam"></div></td>
+											</tr>
+										</tbody>
+										<tbody>
+											<tr>
+												<td colspan="2" class="text-right font-italic">Damga&Onay :</td>
+												<td colspan="2" class="text-left font-weight-bold"><div id="damgaonay"></div></td>
+											</tr>
+										</tbody>
+										<tbody>
+											<tr>
+												<td colspan="2" class="text-right font-italic">Sözleşme Bedeli :</td>
+												<td colspan="2" class="text-left font-weight-bold"><div id="sozlesmebedeli"></div></td>
 											</tr>
 										</tbody>
 									</table>
-									<!--Table Çalışması Deneme Son-->
-								</div>
-							<!--İşlem Sonucu Gösterimi-->
-							<div class="panel panel-default">
-								<div class="panel-body">
-									<h3 class="text-center" style="margin-top:20px;"><div id="sonuc"></div></h3>
-								</div>
-							  </div>
-							<!--Fatura Verileri Gösterimi-->
-							<h4 class="text-center"><div id="faturaverileri"></div></h4>
-								<div style="text-align: center;">
-									<div id="brutson"></div>
-									<div id="stopaj"></div>
-									<div id="kdv"></div>
-									<div id="brutkdv"></div>
-								</div>
-							<!--Diğer Veriler Gösterimi-->
-							<h4 class="text-center"><div id="digerveriler"></div></h4>
-								<div style="text-align: center;">
-									<div id="yolson"></div>
-									<div id="belge"></div>
-									<div id="kontrolluk"></div>
-									<div id="kontrolluktoplam"></div>
-									<div id="damgaonay"></div>
-									<div id="sozlesmebedeli"></div>
+									<!--Tablo Son-->
 								</div>
 							<!--Hesaplama İşlemi Sonrası Sonuçların Gösterimi SON-->
 						</div>
