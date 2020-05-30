@@ -57,3 +57,22 @@ function islemucreti(brut, kontrollukdurum, stopajdurum, yol) {
     document.getElementById('yolson').innerHTML=yol;
     document.getElementById('toplamek').innerHTML=toplamek;
 }
+
+function nitelik(durum){
+    if (durum == "İmar Parseli (1/1)"){
+        return Number(1);
+    }
+    if (durum == "Belediye İçinde Kadastro Parseli (2/3)"){
+        return 2/3;
+    }
+    if (durum == "Belediye Dışında Kadastro Parseli (1/3)"){
+        return 1/3;
+    }
+}
+
+function aplikasyonbrut(parselalanapl) {
+    parselalanapl=Number(document.getElementById("parselalanapl").value);
+    // document.getElementById('brutapl').innerHTML=nitelikapl;
+    var nitelikkatsayi = nitelik(document.getElementById("nitelikapl").value);
+    document.getElementById('brutapl').innerHTML=nitelikkatsayi;
+}
