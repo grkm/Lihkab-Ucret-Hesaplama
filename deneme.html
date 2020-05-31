@@ -240,8 +240,8 @@
 							<div class="card-body">
 								<!-- İşlemlere göre brüt ücret Kısmı Başlangıç -->
 								<button class="btn btn-info btn-block" data-toggle="collapse" data-target="#islem1"
-									aria-expanded="true" aria-controls="islem1">Aplikasyon Krokisi</button>
-								<div id="islem1" style="margin-top:10px; margin-bottom:10px;" class="collapse show">
+									aria-expanded="false" aria-controls="islem1">Aplikasyon Krokisi</button>
+								<div id="islem1" style="margin-top:10px; margin-bottom:10px;" class="collapse">
 									<div class="card-body">
 										<form method="post">
 											<div class="form-label-group">
@@ -289,6 +289,54 @@
 								<div id="islem3" style="margin-top:10px; margin-bottom:10px;" class="collapse">
 									<div class="card-body">
 										Cins Değişikliği
+									</div>
+								</div>
+								<p></p>
+								<button class="btn btn-info btn-block" data-toggle="collapse" data-target="#islem4"
+									aria-expanded="false" aria-controls="islem4">Bağımsız Bölüm Düzeltme</button>
+								<div id="islem4" style="margin-top:10px; margin-bottom:10px;" class="collapse">
+									<div class="card-body">
+										Bağımsız Bölüm Düzeltme
+									</div>
+								</div>
+								<p></p>
+								<button class="btn btn-info btn-block" data-toggle="collapse" data-target="#islem5"
+									aria-expanded="false" aria-controls="islem5">İrtifak Hakkı</button>
+								<div id="islem5" style="margin-top:10px; margin-bottom:10px;" class="collapse">
+									<div class="card-body">
+										İrtifak Hakkı
+									</div>
+								</div>
+								<p></p>
+								<button class="btn btn-info btn-block" data-toggle="collapse" data-target="#islem6"
+									aria-expanded="false" aria-controls="islem6">Yol Aplikasyonu</button>
+								<div id="islem6" style="margin-top:10px; margin-bottom:10px;" class="collapse">
+									<div class="card-body">
+										Yol Aplikasyonu
+									</div>
+								</div>
+								<p></p>
+								<button class="btn btn-info btn-block" data-toggle="collapse" data-target="#islem7"
+									aria-expanded="false" aria-controls="islem7">Vaziyet-Bağımsız</button>
+								<div id="islem7" style="margin-top:10px; margin-bottom:10px;" class="collapse">
+									<div class="card-body">
+										Vaziyet-Bağımsız
+									</div>
+								</div>
+								<p></p>
+								<button class="btn btn-info btn-block" data-toggle="collapse" data-target="#islem8"
+									aria-expanded="false" aria-controls="islem8">Zemin Tespit Tutanağı</button>
+								<div id="islem8" style="margin-top:10px; margin-bottom:10px;" class="collapse">
+									<div class="card-body">
+										Zemin Tespit Tutanağı
+									</div>
+								</div>
+								<p></p>
+								<button class="btn btn-info btn-block" data-toggle="collapse" data-target="#islem9"
+									aria-expanded="false" aria-controls="islem9">Röperli Kroki</button>
+								<div id="islem9" style="margin-top:10px; margin-bottom:10px;" class="collapse">
+									<div class="card-body">
+										Röperli Kroki
 									</div>
 								</div>
 								<!-- İşlemlere göre brüt ücret Kısmı Son -->
@@ -399,8 +447,180 @@
 								<div class="card-body">
 									<!--TKGM Ayarlar Başlangıç -->
 									<div class="card-body">
+										<!-- TKGM Ayarlar İçerik Kısmı Başlangıç -->
+										<form method="post">
+											<!-- Aplikasyon Başlangıç -->
+											<div class="text-center">Aplikasyon (KDV Dahil Fiyatlar)</div>
+											<p></p>
+											<div class="form-label-group">
+												<input class="form-control" type="text" placeholder="1-1000 m² arası" id="ayarlarApl1" name="ayarlarApl1">
+												<label for="ayarlarApl1">1-1000 m² arası</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="text" placeholder="1001-3000 m² arası" id="ayarlarApl2" name="ayarlarApl2">
+												<label for="ayarlarApl2">1001-3000 m² arası</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="text" placeholder="3001-5000 m² arası" id="ayarlarApl3" name="ayarlarApl3">
+												<label for="ayarlarApl3">3001-5000 m² arası</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="text" placeholder="5001-10000 m² arası" id="ayarlarApl4" name="ayarlarApl4">
+												<label for="ayarlarApl4">5001-10000 m² arası</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="text" placeholder="10001-20000 m² arası" id="ayarlarApl5" name="ayarlarApl5">
+												<label for="ayarlarApl5">10001-20000 m² arası</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="text" placeholder="20001-50000 m² arası" id="ayarlarApl6" name="ayarlarApl6">
+												<label for="ayarlarApl6">20001-50000 m² arası</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="text" placeholder="50001-100000 m² arası" id="ayarlarApl7" name="ayarlarApl7">
+												<label for="ayarlarApl7">50001-100000 m² arası</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="text" placeholder="100001-200000 m² arası" id="ayarlarApl8" name="ayarlarApl8">
+												<label for="ayarlarApl8">100001-200000 m² arası</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="text" placeholder="200001-500000 m² arası" id="ayarlarApl9" name="ayarlarApl9">
+												<label for="ayarlarApl9">200001-500000 m² arası</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="text" placeholder="500000 m²'den sonra her 100000 m² için" id="ayarlarApl10" name="ayarlarApl10">
+												<label for="ayarlarApl10">500000 m²'den sonra her 100000 m² için</label>
+											</div>
+											<!-- Aplikasyon Son -->
+											
+											<!-- Kadastral Yol Sınırlarının Belirlenmesi ( Maktu ) Başlangıç -->
+											<p></p>
+											<div class="text-center">Yol Aplikasyonu (KDV Dahil Fiyatlar)</div>
+											<p></p>
+											<div class="form-label-group">
+												<input class="form-control" type="text" placeholder="1-10 nokta için" id="ayarlarAply1" name="ayarlarAply1">
+												<label for="ayarlarAply1">1-10 nokta için</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="text" placeholder="10 noktadan sonra her bir nokta için" id="ayarlarAply2" name="ayarlarAply2">
+												<label for="ayarlarAply2">10 noktadan sonra her bir nokta için</label>
+											</div>
+											<!-- Kadastral Yol Sınırlarının Belirlenmesi Son -->
+											
+											<!-- Cins Değişikliği Başlangıç -->
+											<p></p>
+											<div class="text-center">Cins Değişikliği (KDV Dahil Fiyatlar)</div>
+											<p></p>
+											<div class="text-center">Yapılı Hale Gelme</div>
+											<p></p>
+											<div class="form-label-group">
+												<input class="form-control" type="text" placeholder="Bina taban alanı 0-500 m² için" id="ayarlarCins1" name="ayarlarCins1">
+												<label for="ayarlarCins1">Bina taban alanı 0-500 m² için</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="text" placeholder="Sonraki her 1 m² için" id="ayarlarCins2" name="ayarlarCins2">
+												<label for="ayarlarCins2">Sonraki her 1 m² için</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="text" placeholder="İlave her bina için" id="ayarlarCins3" name="ayarlarCins3">
+												<label for="ayarlarCins3">İlave her bina için</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="text" placeholder="Aynı yapı kat ilavesi" id="ayarlarCins4" name="ayarlarCins4">
+												<label for="ayarlarCins4">Aynı yapı kat ilavesi</label>
+											</div>
+											<p></p>
+											<div class="text-center">Yapısız Hale Gelme</div>
+											<p></p>
+											<div class="form-label-group">
+												<input class="form-control" type="text" placeholder="Yapısız hale gelme" id="ayarlarCins5" name="ayarlarCins5">
+												<label for="ayarlarCins5">Yapısız hale gelme</label>
+											</div>
+											<p></p>
+											<div class="text-center">Tarımsal/Tarla-Arsa</div>
+											<p></p>
+											<div class="form-label-group">
+												<input class="form-control" type="text" placeholder="Bina yapımı ve yıkımı olmayanlar" id="ayarlarCins6" name="ayarlarCins6">
+												<label for="ayarlarCins6">Bina yapımı ve yıkımı olmayanlar</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="text" placeholder="Araziye gidilmesi gerekiyorsa" id="ayarlarCins7" name="ayarlarCins7">
+												<label for="ayarlarCins7">Araziye gidilmesi gerekiyorsa</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="text" placeholder="Tarımsal yapı tavan fiyat" id="ayarlarCins8" name="ayarlarCins8">
+												<label for="ayarlarCins8">Tarımsal yapı tavan fiyat</label>
+											</div>
+											<!-- Cins Değişikliği Son -->
+											
+											<!-- Birleştirme Başlangıç -->
+											<p></p>
+											<div class="text-center">Birleştirme (KDV Dahil Fiyatlar)</div>
+											<p></p>
+											<div class="form-label-group">
+												<input class="form-control" type="text" placeholder="2 Parsel için" id="ayarlarBirl1" name="ayarlarBirl1">
+												<label for="ayarlarBirl1">2 Parsel için</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="text" placeholder="İlave her parsel için %" id="ayarlarBirl2" name="ayarlarBirl2">
+												<label for="ayarlarBirl2">İlave her parsel için %</label>
+											</div>
+											<!-- Birleştirme Son -->
+											
+											<!-- İrtifak Hakkı Başlangıç -->
+											<p></p>
+											<div class="text-center">İrtifak Hakkı (KDV Dahil Fiyatlar)</div>
+											<p></p>
+											<div class="form-label-group">
+												<input class="form-control" type="text" placeholder="2 Parsel için" id="ayarlarIrt1" name="ayarlarIrt1">
+												<label for="ayarlarIrt1">2 Parsel için</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="text" placeholder="İlave her parsel için" id="ayarlarIrt2" name="ayarlarIrt2">
+												<label for="ayarlarIrt2">İlave her parsel için</label>
+											</div>
+											<!-- İrtifak Hakkı Son -->
+											
+											<!-- Hatalı Bağımsız Bölüm Düzeltme İşlemi Teknik Rapor Hazırlama Başlangıç -->
+											<p></p>
+											<div class="text-center">Bağımsız Bölüm Düzeltme (KDV Dahil Fiyatlar)</div>
+											<p></p>
+											<div class="form-label-group">
+												<input class="form-control" type="text" placeholder="2 bağ. böl. için" id="ayarlarBbd1" name="ayarlarBbd1">
+												<label for="ayarlarBbd1">2 bağ. böl. için</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="text" placeholder="İlave her bağ. böl. için" id="ayarlarBbd2" name="ayarlarBbd2">
+												<label for="ayarlarBbd2">İlave her bağ. böl. için</label>
+											</div>
+											<!-- Hatalı Bağımsız Bölüm Düzeltme İşlemi Teknik Rapor Hazırlama Son -->
+											
+											<!-- Zemin Tespit Tutanağı Başlangıç -->
+											<p></p>
+											<div class="text-center">İmar Barışı (KDV Dahil Fiyatlar)</div>
+											<p></p>
+											<div class="form-label-group">
+												<input class="form-control" type="text" placeholder="Taban alanı 0-100" id="ayarlarZtt1" name="ayarlarZtt1">
+												<label for="ayarlarZtt1">Taban alanı 0-100</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="text" placeholder="İlave her 1 m² için" id="ayarlarZtt2" name="ayarlarZtt2">
+												<label for="ayarlarZtt2">İlave her 1 m² için</label>
+											</div>
+											<!-- Zemin Tespit Tutanağı Son -->
+											
+											
+											<input type="button" onclick="tkgmayarkaydet();"
+											class="btn btn-lg btn-info btn-block btn-login font-weight-bold mb-2"
+											value="Ayarları Kaydet" name="btntkgmayarkaydet" id="btntkgmayarkaydet">
+											
+											<div class="hatatkgmayar"></div>
+											
+										</form>
+										<!-- TKGM Ayarlar İçerik Kısmı Son -->
+
 									</div>
-									<h6 class="text-center">2222222</a></h6>
 									<!-- TKGM Ayarlar Son -->
 								</div>
 							</div>
@@ -418,7 +638,7 @@
 									<!-- HKMO Ayarlar Başlangıç -->
 									<div class="card-body">
 									</div>
-									<h6 class="text-center">3333333</a></h6>
+									<h6 class="text-center">HKMO Ayarları</a></h6>
 									<!-- HKMO Ayarlar Son -->
 								</div>
 							</div>
@@ -435,11 +655,14 @@
 								<div class="card-body">
 									<!-- Yedekle/Kurtar Başlangıç -->
 									<div class="card-body">
-										<div><a class="backup" href="#" data-function="localStorageBackup">localstorage Yedekle</a></div>
-										<div><a class="backup" href="#" data-function="localStorageRestore">localstorage Kurtar</a></div>
-										<div><a class="backup" href="#" data-function="localStorageClear">localstorage Sil</a></div>
+										<div class="text-center">NOT: Uygulama ayarları kaydetmek için localstorage kullanmaktadır.
+											Dolayısıyla kullandığınız tarayıcının localstorage özelliği yok ise uygulama çalışmayacaktır. 
+											Ayrıca tarayıcı geçmişinizi silerseniz kayıtlı ayarlarınız kaybolacağı için kendi 
+											yedeklerinizi bu kısmı kullanarak alabilir. Yedeklerinizi sisteme tanımlayabilirsiniz.</div>
+										<div class="text-center"><a class="backup btn-block" href="#" data-function="localStorageBackup">Yedekle</a></div>
+										<div class="text-center"><a class="backup btn-block" href="#" data-function="localStorageRestore">Kurtar</a></div>
+										<div class="text-center"><a class="backup btn-block" href="#" data-function="localStorageClear">Herşeyi Sil</a></div>
 									</div>
-									<h6 class="text-center">3333333</a></h6>
 									<!-- Yedekle/Kurtar Son -->
 								</div>
 							</div>
