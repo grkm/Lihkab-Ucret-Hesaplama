@@ -8,27 +8,27 @@ body {
     background: linear-gradient(to right, rebeccapurple, lightcoral);
 }
 
-.card-signin {
+.card-blok {
     border: 0;
     border-radius: 1rem;
     box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
 }
 
-.card-signin .card-title {
+.card-blok .card-title {
     margin-bottom: 2rem;
     font-weight: 300;
     font-size: 1.5rem;
 }
 
-.card-signin .card-body {
+.card-blok .card-body {
     padding: 2rem;
 }
 
-.form-signin {
+.form-blok {
     width: 100%;
 }
 
-.form-signin .btn {
+.form-blok .btn {
     font-size: 80%;
     border-radius: 5rem;
     letter-spacing: .1rem;
