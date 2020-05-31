@@ -108,7 +108,7 @@
 											</thead>
 											<tbody>
 												<tr>
-													<td colspan="2" class="text-right font-italic">Alınacak Ücret :</td>
+													<td colspan="2" class="text-right font-italic">Alınacak Ücret:</td>
 													<td colspan="2" class="text-left font-weight-bold">
 														<div id="sonuc"></div>
 													</td>
@@ -123,7 +123,7 @@
 											</tbody>
 											<tbody>
 												<tr>
-													<td colspan="2" class="text-right font-italic">Brüt Ücret :</td>
+													<td colspan="2" class="text-right font-italic">Brüt Ücret:</td>
 													<td colspan="2" class="text-left font-weight-bold">
 														<div id="brutson"></div>
 													</td>
@@ -131,7 +131,7 @@
 											</tbody>
 											<tbody>
 												<tr>
-													<td colspan="2" class="text-right font-italic">Stopaj :</td>
+													<td colspan="2" class="text-right font-italic">Stopaj:</td>
 													<td colspan="2" class="text-left font-weight-bold">
 														<div id="stopaj"></div>
 													</td>
@@ -139,7 +139,7 @@
 											</tbody>
 											<tbody>
 												<tr>
-													<td colspan="2" class="text-right font-italic">Kdv :</td>
+													<td colspan="2" class="text-right font-italic">Kdv:</td>
 													<td colspan="2" class="text-left font-weight-bold">
 														<div id="kdv"></div>
 													</td>
@@ -147,7 +147,7 @@
 											</tbody>
 											<tbody>
 												<tr>
-													<td colspan="2" class="text-right font-italic">Net :</td>
+													<td colspan="2" class="text-right font-italic">Net:</td>
 													<td colspan="2" class="text-left font-weight-bold">
 														<div id="brutkdv"></div>
 													</td>
@@ -162,7 +162,7 @@
 											</tbody>
 											<tbody>
 												<tr>
-													<td colspan="2" class="text-right font-italic">Mahalle Ücreti :</td>
+													<td colspan="2" class="text-right font-italic">Mahalle Ücreti:</td>
 													<td colspan="2" class="text-left font-weight-bold">
 														<div id="yolson"></div>
 													</td>
@@ -170,7 +170,7 @@
 											</tbody>
 											<tbody>
 												<tr>
-													<td colspan="2" class="text-right font-italic">Belge Alımı :</td>
+													<td colspan="2" class="text-right font-italic">Belge Alımı:</td>
 													<td colspan="2" class="text-left font-weight-bold">
 														<div id="belge"></div>
 													</td>
@@ -178,7 +178,7 @@
 											</tbody>
 											<tbody>
 												<tr>
-													<td colspan="2" class="text-right font-italic">Kontrollük :</td>
+													<td colspan="2" class="text-right font-italic">Kontrollük:</td>
 													<td colspan="2" class="text-left font-weight-bold">
 														<div id="kontrolluk"></div>
 													</td>
@@ -186,7 +186,7 @@
 											</tbody>
 											<tbody>
 												<tr>
-													<td colspan="2" class="text-right font-italic">Harç Toplam :</td>
+													<td colspan="2" class="text-right font-italic">Harç Toplam:</td>
 													<td colspan="2" class="text-left font-weight-bold">
 														<div id="kontrolluktoplam"></div>
 													</td>
@@ -194,7 +194,7 @@
 											</tbody>
 											<tbody>
 												<tr>
-													<td colspan="2" class="text-right font-italic">Damga&Onay :</td>
+													<td colspan="2" class="text-right font-italic">Damga & Onay:</td>
 													<td colspan="2" class="text-left font-weight-bold">
 														<div id="damgaonay"></div>
 													</td>
@@ -202,7 +202,7 @@
 											</tbody>
 											<tbody>
 												<tr>
-													<td colspan="2" class="text-right font-italic">Sözleşme Bedeli :
+													<td colspan="2" class="text-right font-italic">Sözleşme Bedeli:
 													</td>
 													<td colspan="2" class="text-left font-weight-bold">
 														<div id="sozlesmebedeli"></div>
@@ -211,7 +211,7 @@
 											</tbody>
 											<tbody>
 												<tr>
-													<td colspan="2" class="text-right font-italic">Toplam Ek Ücret :
+													<td colspan="2" class="text-right font-italic">Toplam Ek Ücret:
 													</td>
 													<td colspan="2" class="text-left font-weight-bold">
 														<div id="toplamek"></div>
@@ -346,8 +346,48 @@
 								<div class="card-body">
 									<!-- Genel Uygulama Ayarları Başlangıç -->
 									<div class="card-body">
+										<form method="post">
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" value="ayarlarSozlesmeBedeli" id="defaultCheck1" checked>
+												<label class="form-check-label" for="defaultCheck1">
+												  Sözleşme Bedeli Ekle
+												</label>
+											</div>
+											<div class="form-group">
+												<input class="form-control" type="text" placeholder="Sözleşme Bedeli">
+											</div>
+											<div class="form-group">
+												<input class="form-control" type="text" placeholder="Bölgesel Satın Alma Paritesi">
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" value="ayarlarYuvarlamaDurum" id="defaultChec2" checked>
+												<label class="form-check-label" for="defaultCheck2">
+												  Sonuçta Yuvarlama Yapılsın
+												</label>
+											</div>
+											<div class="form-group">
+												<input class="form-control" type="text" placeholder="Yuvarlama Katı">
+											</div>
+											<div class="form-group">
+												<input class="form-control" type="text" placeholder="Onay-Damga Katsayı">
+											</div>
+											<div class="form-group">
+												<input class="form-control" type="text" placeholder="Belge Alımı Katsayı">
+											</div>
+											<div class="form-group">
+												<input class="form-control" type="text" placeholder="Kontrollük Katsayı">
+											</div>
+											<div class="form-group">
+												<input class="form-control" type="text" placeholder="Yakıt Lt Fiyatı">
+											</div>
+											<div class="form-group">
+												<input class="form-control" type="text" placeholder="Yakıt Km Katsayı">
+											</div>
+											<input type="button" onclick="genelayarkaydet();"
+											class="btn btn-lg btn-info btn-block btn-login font-weight-bold mb-2"
+											value="Ayarları Kaydet" name="genelayarkaydet" id="genelayarkaydet">
+										  </form>
 									</div>
-									<h6 class="text-center">111111</a></h6>
 									<!-- Genel Uygulama Ayarları Son -->
 								</div>
 							</div>
