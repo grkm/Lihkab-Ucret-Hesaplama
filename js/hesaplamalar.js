@@ -77,15 +77,52 @@ function aplikasyonbrut(parselalanapl) {
     document.getElementById('brutapl').innerHTML=nitelikkatsayi;
 }
 
-function genelayarkaydet(sozlesmeBedeli) {
-    sozlesmeBedeli=document.getElementById("ayarlarSozlesmeBedeli").value;
-    // Check browser support
+function FormOnLoad() {
     if (typeof(Storage) != "undefined") {
-        // DEPOLA
-        localStorage.setItem("ayarSozlesmeBedeli", sozlesmeBedeli);
-        // VERIYE ERIS
-        // document.getElementById("MITAT").innerHTML = localStorage.getItem("SOYAD");
+        // Verilere Erişme Genel Ayarlar Kısmı
+        document.getElementById("ayarlarSozlesmeBedeliDurum").checked = JSON.parse(localStorage.getItem("ayarSozlesmeBedeliDurum"));
+        document.getElementById("ayarlarYuvarlamaDurum").checked = JSON.parse(localStorage.getItem("ayarYuvarlamaKatDurum"));
+
+        document.getElementById("ayarlarSozlesmeBedeli").value = localStorage.getItem("ayarSozlesmeBedeli");
+        document.getElementById("ayarlarSehir").value = localStorage.getItem("ayarSehir");
+        document.getElementById("ayarlarYuvarlama").value = localStorage.getItem("ayarYuvarlama");
+        document.getElementById("ayarlarOnaydamga").value = localStorage.getItem("ayarOnaydamga");
+        document.getElementById("ayarlarBelge").value = localStorage.getItem("ayarBelge");
+        document.getElementById("ayarlarKontrolluk").value = localStorage.getItem("ayarKontrolluk");
+        document.getElementById("ayarlarYakitlt").value = localStorage.getItem("ayarYakitlt");
+        document.getElementById("ayarlarYakitkm").value = localStorage.getItem("ayarYakitkm");
     } else {
-        document.getElementById("ayarlarSozlesmeBedeli").innerHTML = "TARAYICINIZDA WEB STORAGE OZELLIGI YOK";
+        
+    }
+}
+
+function genelayarkaydet() {
+    sozlesmeBedeliDurum=document.getElementById("ayarlarSozlesmeBedeliDurum");
+    yuvarlamaKatDurum=document.getElementById("ayarlarYuvarlamaDurum");
+
+    sozlesmeBedeli=document.getElementById("ayarlarSozlesmeBedeli").value;
+    sehirKatsayisi=document.getElementById("ayarlarSehir").value;
+    yuvarlamaKat=document.getElementById("ayarlarYuvarlama").value;
+    onaydamagaKatsayi=document.getElementById("ayarlarOnaydamga").value;
+    belgeKatsayi=document.getElementById("ayarlarBelge").value;
+    kontrollukKatsayi=document.getElementById("ayarlarKontrolluk").value;
+    yakitltKatsayi=document.getElementById("ayarlarYakitlt").value;
+    yakitkmKatsayi=document.getElementById("ayarlarYakitkm").value;
+    // Eğer Browserın desteği yoksa hata verecek
+    if (typeof(Storage) != "undefined") {
+        // Verileri Depolama
+        localStorage.setItem("ayarSozlesmeBedeliDurum", sozlesmeBedeliDurum.checked);
+        localStorage.setItem("ayarYuvarlamaKatDurum", yuvarlamaKatDurum.checked);
+
+        localStorage.setItem("ayarSozlesmeBedeli", sozlesmeBedeli);
+        localStorage.setItem("ayarSehir", sehirKatsayisi);
+        localStorage.setItem("ayarYuvarlama", yuvarlamaKat);
+        localStorage.setItem("ayarOnaydamga", onaydamagaKatsayi);
+        localStorage.setItem("ayarBelge", belgeKatsayi);
+        localStorage.setItem("ayarKontrolluk", kontrollukKatsayi);
+        localStorage.setItem("ayarYakitlt", yakitltKatsayi);
+        localStorage.setItem("ayarYakitkm", yakitkmKatsayi);
+    } else {
+        document.getElementById("hatagenelayar").innerHTML = "Tarayıcınızda Local Storage Özelliği Bulunmadığı için bunu kullanamazsınız!!!";
     }
 }
