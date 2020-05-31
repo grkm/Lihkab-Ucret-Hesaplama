@@ -31,13 +31,13 @@ var localStorageRestore = function() {
   a.onclick = function() {
       t.remove();
   };
-  t.style.width = '50%';
-  t.style.position = 'absolute';
-  t.style.top = '25%';
-  t.style.left = '25%';
+  t.style.width = '90%';
+  t.style.position = 'fixed';
+  t.style.top = '5%';
+  t.style.left = '5%';
   t.style['background-color'] = 'gray';
-  t.style['text-align'] = 'center';
-  t.style.padding = '50px';
+  t.style['text-align'] = 'left';
+  t.style.padding = '10px';
   t.style.color = '#fff';
   t.style['z-index'] = 10000;
 
@@ -60,18 +60,18 @@ var localStorageRestore = function() {
           };
           reader.readAsText(f);
       } else {
-        alert('Yüklerken hata oluştu');
+        alert('Dosya yüklenirken hata oluştu');
       }
   };
-  var a = document.createElement('h3');
-  a.appendChild(document.createTextNode('Yedeklenecek dosyayı seçiniz'));
+  var a = document.createElement('h6');
+  a.appendChild(document.createTextNode('Yedeklenecek Dosyayı Seçiniz'));
   t.appendChild(a);
   t.appendChild(l);
   document.querySelector('body').appendChild(t);
 };
 
 var localStorageClear = function() {
-  if(window.confirm('Kayıtlı olan ' + localStorage.length + ' tane veriyi silmek istediğine emin misin?')) {
+  if(window.confirm('Kayıtlı olan ' + localStorage.length + ' tane veriyi silmek istediğinize emin misiniz?')) {
     localStorage.clear();
   }
 }
