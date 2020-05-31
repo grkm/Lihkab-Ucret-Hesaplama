@@ -76,3 +76,16 @@ function aplikasyonbrut(parselalanapl) {
     var nitelikkatsayi = nitelik(document.getElementById("nitelikapl").value);
     document.getElementById('brutapl').innerHTML=nitelikkatsayi;
 }
+
+function genelayarkaydet(sozlesmeBedeli) {
+    sozlesmeBedeli=document.getElementById("ayarlarSozlesmeBedeli").value;
+    // Check browser support
+    if (typeof(Storage) != "undefined") {
+        // DEPOLA
+        localStorage.setItem("ayarSozlesmeBedeli", sozlesmeBedeli);
+        // VERIYE ERIS
+        // document.getElementById("MITAT").innerHTML = localStorage.getItem("SOYAD");
+    } else {
+        document.getElementById("ayarlarSozlesmeBedeli").innerHTML = "TARAYICINIZDA WEB STORAGE OZELLIGI YOK";
+    }
+}
