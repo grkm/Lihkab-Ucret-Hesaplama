@@ -5,6 +5,7 @@ const assets = [
     '/deneme.html',
     '/js/app.js',
     '/js/hesaplamalar.js',
+    '/js/backup.js',
 	'/css/bootstrap.css',
 	'/css/style.css',
 	'/css/bootstrap.js',
