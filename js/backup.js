@@ -60,7 +60,7 @@ var localStorageRestore = function() {
           };
           reader.readAsText(f);
       } else {
-        alert('Failed to load file');
+        alert('Yüklerken hata oluştu');
       }
   };
   var a = document.createElement('h3');
@@ -71,7 +71,7 @@ var localStorageRestore = function() {
 };
 
 var localStorageClear = function() {
-  if(window.confirm('Kayıtl olan ' + localStorage.length + ' tane veriyi silmek istediğine emin misin?')) {
+  if(window.confirm('Kayıtlı olan ' + localStorage.length + ' tane veriyi silmek istediğine emin misin?')) {
     localStorage.clear();
   }
 }
