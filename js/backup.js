@@ -56,7 +56,7 @@ var localStorageRestore = function() {
                  var value = decodeURIComponent(unescape(backup[key]));
                  window.localStorage.setItem(key, value);
                }
-              alert('Imported ' + Object.keys(backup).length + ' items from backup.')
+              alert('Yüklenen ' + Object.keys(backup).length + ' tane veri sisteme eklendi.')
           };
           reader.readAsText(f);
       } else {
@@ -64,14 +64,14 @@ var localStorageRestore = function() {
       }
   };
   var a = document.createElement('h3');
-  a.appendChild(document.createTextNode('Select file with backup'));
+  a.appendChild(document.createTextNode('Yedeklenecek dosyayı seçiniz'));
   t.appendChild(a);
   t.appendChild(l);
   document.querySelector('body').appendChild(t);
 };
 
 var localStorageClear = function() {
-  if(window.confirm('Do you really want to delete all ' + localStorage.length + ' localStorage items of this website?')) {
+  if(window.confirm('Kayıtl olan ' + localStorage.length + ' tane veriyi silmek istediğine emin misin?')) {
     localStorage.clear();
   }
 }
