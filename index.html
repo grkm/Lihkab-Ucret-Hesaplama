@@ -2,158 +2,404 @@
 <html lang="tr">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="Description" content="Lisanslı Harita Kadastro Mühendislik Büroları (LİHKAB) için online ücret hesaplama web uygulaması">
-    <meta name="theme-color" content="#161a1f">
-    <!-- Apple iPhone/iPad Ayarlamaları -->
-    <link rel="icon" href="./img/icons/icon-384x384.png">
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="Description"
+		content="Lisanslı Harita Kadastro Mühendislik Büroları (LİHKAB) için online ücret hesaplama web uygulaması">
+	<meta name="theme-color" content="#161a1f">
+	<!-- Apple iPhone/iPad Ayarlamaları -->
+	<link rel="icon" href="./img/icons/icon-384x384.png">
 	<link rel="apple-touch-icon" href="./img/icons/icon-172x172.png">
 	<link rel="apple-touch-icon" sizes="152x152" href="./img/icons/icon-152x152.png">
 	<link rel="apple-touch-icon" sizes="167x167" href="./img/icons/icon-167x167.png">
 	<link rel="apple-touch-icon" sizes="180x180" href="./img/icons/icon-180x180.png">
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="default">
-  	<meta name="apple-mobile-web-app-title" content="Lihkab Ücret Hesabı">
-	<link rel="apple-touch-startup-image" href="./img/splash/launch-2048x2732.png" sizes="2048x2732" media="(min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
-	<link rel="apple-touch-startup-image" href="./img/splash/launch-1668x2224.png" sizes="1668x2224" media="(min-device-width: 834px) and (max-device-width: 834px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
-	<link rel="apple-touch-startup-image" href="./img/splash/launch-1536x2048.png" sizes="1536x2048" media="(min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
-	<link rel="apple-touch-startup-image" href="./img/splash/launch-1125x2436.png" sizes="1125x2436" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
-	<link rel="apple-touch-startup-image" href="./img/splash/launch-1242x2148.png" sizes="1242x2208" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
-	<link rel="apple-touch-startup-image" href="./img/splash/launch-750x1294.png" sizes="750x1334" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
-	<link rel="apple-touch-startup-image" href="./img/splash/launch-640x1136.png" sizes="640x1136" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+	<meta name="apple-mobile-web-app-title" content="Lihkab Ücret Hesabı">
+	<link rel="apple-touch-startup-image" href="./img/splash/launch-2048x2732.png" sizes="2048x2732"
+		media="(min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+	<link rel="apple-touch-startup-image" href="./img/splash/launch-1668x2224.png" sizes="1668x2224"
+		media="(min-device-width: 834px) and (max-device-width: 834px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+	<link rel="apple-touch-startup-image" href="./img/splash/launch-1536x2048.png" sizes="1536x2048"
+		media="(min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+	<link rel="apple-touch-startup-image" href="./img/splash/launch-1125x2436.png" sizes="1125x2436"
+		media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+	<link rel="apple-touch-startup-image" href="./img/splash/launch-1242x2148.png" sizes="1242x2208"
+		media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+	<link rel="apple-touch-startup-image" href="./img/splash/launch-750x1294.png" sizes="750x1334"
+		media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+	<link rel="apple-touch-startup-image" href="./img/splash/launch-640x1136.png" sizes="640x1136"
+		media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
 	<link rel="mask-icon" href="./img/splash/safari-pinned-tab.svg" color="#6F6F6F">
 	<!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="./css/bootstrap.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="./css/jquery-3.4.0.slim.min.js"></script>
-    <script src="./css/bootstrap.js"></script>
-    <script src="./css/popper.min.js"></script>
-    <script src="./css/tooltip.min.js"></script>
-    <!--<link rel="stylesheet" href="./css/style.css">-->
-    <link rel="manifest" href="manifest.json">
-    <title>Lihkab Ücret Hesabı</title>
+	<link rel="stylesheet" href="./css/bootstrap.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<script src="./css/jquery-3.4.0.slim.min.js"></script>
+	<script src="./css/bootstrap.js"></script>
+	<script src="./css/popper.min.js"></script>
+	<script src="./css/tooltip.min.js"></script>
+	<!--<link rel="stylesheet" href="./css/style.css">-->
+	<link rel="manifest" href="manifest.json">
+	<title>Lihkab Ücret Hesabı</title>
 </head>
 
-<body data-gr-c-s-loaded="true" style="
-    background: #292727; !important">
-    <!-- start body -->
-    <br>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-                <div class="card card-signin my-5">
-                    <div class="card-body">
-			<h3 class="login-heading mb-4 text-center">Lihkab Ücret Hesabı</h3>
-                        <form method="post">
-                            <div class="form-label-group">
-                                <input type="number" id="brut" name="brut" class="form-control"
-                                    placeholder="Brüt Ücret" required autofocus>
-                                <label for="brut">Brüt Ücret</label>
-                            </div>
-				<div class="custom-control custom-checkbox mb-3">
-                                <input type="checkbox" name="kontrollukKontrol" class="custom-control-input"
-                                    id="kontrollukKontrol">
-                                <label class="custom-control-label" for="kontrollukKontrol">Kontrollük Ekle</label>
-                            </div>
+<body data-gr-c-s-loaded="true" style="background: #292727; !important">
+	<!-- start body -->
+	<!--<br>  başlangıçta boşluk olmasın -->
+	<p></p>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 mx-auto">
+				<div class="accordion card card-blok my-5" id="accordionHesapla">
+					<div class="card">
+						<div class="card-header" id="headingOne">
+							<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+								aria-expanded="true" aria-controls="collapseOne">
+								İşlem Ücreti Hesabı
+							</button>
+						</div>
+						<div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+							data-parent="#accordionHesapla">
+							<div class="card-body">
+								<!-- Ücret Hesaplama Kısmı Başlangıç -->
+								<div class="card-body">
+									<form method="post">
+										<div class="form-label-group">
+											<input type="number" id="brut" name="brut" class="form-control"
+												placeholder="Brüt Ücret" required autofocus>
+											<label for="brut">Brüt Ücret</label>
+										</div>
+										<div class="custom-control custom-checkbox mb-3">
+											<input type="checkbox" name="kontrollukKontrol" class="custom-control-input"
+												id="kontrollukKontrol">
+											<label class="custom-control-label" for="kontrollukKontrol">Kontrollük
+												Ekle</label>
+										</div>
 
-                            <div class="form-label-group">
-                                <input type="number" id="yol" name="yol" class="form-control"
-                                    placeholder="Yol Ücreti" required autofocus>
-                                <label for="yol">Yol Ücreti</label>
-                            </div>
+										<div class="form-label-group">
+											<input type="number" id="yol" name="yol" class="form-control"
+												placeholder="Yol Ücreti" required autofocus>
+											<label for="yol">Yol Ücreti</label>
+										</div>
 
-                            <div class="custom-control custom-checkbox mb-3">
-                                <input type="checkbox" name="stopajKontrol" class="custom-control-input"
-                                    id="stopajKontrol">
-                                <label class="custom-control-label" for="stopajKontrol">Stopajlı Ücret Hesapla</label>
-                            </div>
-                            <input type="button" class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" value="Hesapla" name="btnHesapla" id="btnHesapla">
-                        </form>
-						<h3 class="text-center"><div id="sonuc"></div></h3>
-						<h4 class="text-center"><div id="faturaverileri"></div></h4>
-							<div style="text-align: center;">
-								<div id="brutson"></div>
-								<div id="stopaj"></div>
-								<div id="kdv"></div>
-								<div id="brutkdv"></div>
+										<div class="custom-control custom-checkbox mb-3">
+											<input type="checkbox" name="stopajKontrol" class="custom-control-input"
+												id="stopajKontrol">
+											<label class="custom-control-label" for="stopajKontrol">Stopajlı Ücret
+												Hesapla</label>
+										</div>
+										<input type="button" onclick="islemucreti();"
+											class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2"
+											value="Hesapla" name="btnHesapla" id="btnHesapla">
+									</form>
+									<!--Hesaplama İşlemi Sonrası Sonuçların Gösterimi BAŞLANGIÇ-->
+									<button class="btn btn-info btn-block" data-toggle="collapse" data-target="#demo"
+										aria-expanded="true" aria-controls="demo">Sonuçları Gizle/Göster</button>
+									<div id="demo" class="collapse show">
+										<!--Tablo Başlangıç-->
+										<table class="table table-hover" style="margin-top:40px; table-layout:fixed;">
+											<!--İşlem Sonucu Gösterimi-->
+											<thead>
+												<tr>
+													<td colspan="4" class="text-center font-weight-bold">~ Sonuçlar ~
+													</td>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td colspan="2" class="text-right font-italic">Alınacak Ücret :</td>
+													<td colspan="2" class="text-left font-weight-bold">
+														<div id="sonuc"></div>
+													</td>
+												</tr>
+											</tbody>
+											<!--Fatura Verileri Gösterimi-->
+											<tbody>
+												<tr>
+													<td colspan="4" class="text-center font-weight-bold">~ Fatura
+														Verileri ~</td>
+												</tr>
+											</tbody>
+											<tbody>
+												<tr>
+													<td colspan="2" class="text-right font-italic">Brüt Ücret :</td>
+													<td colspan="2" class="text-left font-weight-bold">
+														<div id="brutson"></div>
+													</td>
+												</tr>
+											</tbody>
+											<tbody>
+												<tr>
+													<td colspan="2" class="text-right font-italic">Stopaj :</td>
+													<td colspan="2" class="text-left font-weight-bold">
+														<div id="stopaj"></div>
+													</td>
+												</tr>
+											</tbody>
+											<tbody>
+												<tr>
+													<td colspan="2" class="text-right font-italic">Kdv :</td>
+													<td colspan="2" class="text-left font-weight-bold">
+														<div id="kdv"></div>
+													</td>
+												</tr>
+											</tbody>
+											<tbody>
+												<tr>
+													<td colspan="2" class="text-right font-italic">Net :</td>
+													<td colspan="2" class="text-left font-weight-bold">
+														<div id="brutkdv"></div>
+													</td>
+												</tr>
+											</tbody>
+											<!--Diğer Veriler Gösterimi-->
+											<tbody>
+												<tr>
+													<td colspan="4" class="text-center font-weight-bold">~ Diğer Veriler
+														~</td>
+												</tr>
+											</tbody>
+											<tbody>
+												<tr>
+													<td colspan="2" class="text-right font-italic">Mahalle Ücreti :</td>
+													<td colspan="2" class="text-left font-weight-bold">
+														<div id="yolson"></div>
+													</td>
+												</tr>
+											</tbody>
+											<tbody>
+												<tr>
+													<td colspan="2" class="text-right font-italic">Belge Alımı :</td>
+													<td colspan="2" class="text-left font-weight-bold">
+														<div id="belge"></div>
+													</td>
+												</tr>
+											</tbody>
+											<tbody>
+												<tr>
+													<td colspan="2" class="text-right font-italic">Kontrollük :</td>
+													<td colspan="2" class="text-left font-weight-bold">
+														<div id="kontrolluk"></div>
+													</td>
+												</tr>
+											</tbody>
+											<tbody>
+												<tr>
+													<td colspan="2" class="text-right font-italic">Harç Toplam :</td>
+													<td colspan="2" class="text-left font-weight-bold">
+														<div id="kontrolluktoplam"></div>
+													</td>
+												</tr>
+											</tbody>
+											<tbody>
+												<tr>
+													<td colspan="2" class="text-right font-italic">Damga&Onay :</td>
+													<td colspan="2" class="text-left font-weight-bold">
+														<div id="damgaonay"></div>
+													</td>
+												</tr>
+											</tbody>
+											<tbody>
+												<tr>
+													<td colspan="2" class="text-right font-italic">Sözleşme Bedeli :
+													</td>
+													<td colspan="2" class="text-left font-weight-bold">
+														<div id="sozlesmebedeli"></div>
+													</td>
+												</tr>
+											</tbody>
+											<tbody>
+												<tr>
+													<td colspan="2" class="text-right font-italic">Toplam Ek Ücret :
+													</td>
+													<td colspan="2" class="text-left font-weight-bold">
+														<div id="toplamek"></div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+										<!--Tablo Son-->
+									</div>
+									<!--Hesaplama İşlemi Sonrası Sonuçların Gösterimi SON-->
+								</div>
+								<!-- Ücret Hesaplama Kısmı Son -->
 							</div>
-						<h4 class="text-center"><div id="digerveriler"></div></h4>
-							<div style="text-align: center;">
-								<div id="yolson"></div>
-								<div id="belge"></div>
-								<div id="kontrolluk"></div>
-								<div id="kontrolluktoplam"></div>
-								<div id="damgaonay"></div>
-								<div id="sozlesmebedeli"></div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-header" id="headingTwo">
+							<button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+								data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+								Brüt Ücret Hesabı
+							</button>
+						</div>
+						<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+							data-parent="#accordionHesapla">
+							<div class="card-body">
+								<!-- İşlemlere göre brüt ücret Kısmı Başlangıç -->
+								<button class="btn btn-info btn-block" data-toggle="collapse" data-target="#islem1"
+									aria-expanded="true" aria-controls="islem1">Aplikasyon Krokisi</button>
+								<div id="islem1" style="margin-top:10px; margin-bottom:10px;" class="collapse show">
+									<div class="card-body">
+										<form method="post">
+											<div class="form-label-group">
+												<input type="number" id="parselalanapl" name="parselalanapl"
+													class="form-control" placeholder="Parsel Alanı" required autofocus>
+												<label for="parselalanapl">Parsel Alanı</label>
+											</div>
+
+											<div class="form-label-group">
+												<select class="form-control" id="nitelikapl" name="nitelikapl"
+													class="form-control" placeholder="Nitelik" required autofocus>
+													<option>İmar Parseli (1/1)</option>
+													<option>Belediye İçinde Kadastro Parseli (2/3)</option>
+													<option>Belediye Dışında Kadastro Parseli (1/3)</option>
+												</select>
+											</div>
+
+											<input type="button" onclick="aplikasyonbrut();"
+												class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2"
+												value="Brüt Hesapla" name="btnaplHesapla" id="btnaplHesapla">
+										</form>
+										<table class="table table-hover" style="margin-top:40px; table-layout:fixed;">
+											<tbody>
+												<tr>
+													<td class="text-right font-italic">Brüt Ücret :</td>
+													<td class="text-left font-weight-bold">
+														<div id="brutapl"></div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<p></p>
+								<button class="btn btn-info btn-block" data-toggle="collapse" data-target="#islem2"
+									aria-expanded="false" aria-controls="islem2">Birleştirme</button>
+								<div id="islem2" style="margin-top:10px; margin-bottom:10px;" class="collapse">
+									<div class="card-body">
+										Birleştirme
+									</div>
+								</div>
+								<p></p>
+								<button class="btn btn-info btn-block" data-toggle="collapse" data-target="#islem3"
+									aria-expanded="false" aria-controls="islem3">Cins Değişikliği</button>
+								<div id="islem3" style="margin-top:10px; margin-bottom:10px;" class="collapse">
+									<div class="card-body">
+										Cins Değişikliği
+									</div>
+								</div>
+								<!-- İşlemlere göre brüt ücret Kısmı Son -->
 							</div>
-						<div id="brutson"></div>
-                    </div>
-			<h6 class="text-center">2020 ~ <a href="https://gorkemtabak.blogspot.com">Görkem Tabak</a></h6>
-			<h6 class="text-center">gorkemtabak@gmail.com</h6>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- end body -->
-    <script src="./js/app.js"></script>
-	
-	<script type="text/javascript">
-		var btn=document.getElementById("btnHesapla");
-		btn.onclick=function(){
-		var brut=Number(document.getElementById("brut").value);
-		var yol=Number(document.getElementById("yol").value);
-		var kdv=brut*0.18;
-			kdv = Number(kdv.toFixed(2));
-		var brutkdv=brut+kdv;
-		var damgaonay =  brut*0.00948;
-			damgaonay = Number(damgaonay.toFixed(2));
-		var sozlesmebedeli = 8.5;
-		var blg = brutkdv*0.05;
-			blg = Number(blg.toFixed(2));
-		var knt = brutkdv*0.05;
-			knt = Number(knt.toFixed(2));
-		var kontrollukdurum = document.getElementById("kontrollukKontrol");
-			if (kontrollukdurum.checked == false){
-				var kontrolluk = blg;
-				document.getElementById('kontrolluk').innerHTML="Kontrollük : "+"0";
-				}
-			else {
-				var kontrolluk = blg+knt;
-				document.getElementById('kontrolluk').innerHTML="Kontrollük : "+knt;
-				}
-		var stopajdurum = document.getElementById("stopajKontrol");
-			if (stopajdurum.checked == false){
-				var stopaj = 0;
-				}
-			else {
-				var stopaj = brut*0.2;
-				stopaj = Number(stopaj.toFixed(2));
-				brutkdv=brut+kdv-stopaj;
-				}
-		var toplam=brut+kdv+kontrolluk-stopaj+yol+sozlesmebedeli+damgaonay;
-			toplam = yuvarla(toplam, 2);
-		document.getElementById('sonuc').innerHTML="Sonuç : "+toplam;
-		document.getElementById('brutson').innerHTML="Brüt : "+brut;
-		document.getElementById('kdv').innerHTML="Kdv : "+kdv;
-		document.getElementById('belge').innerHTML="Belge Alımı : "+blg;
-		document.getElementById('kontrolluktoplam').innerHTML="Harç Toplam : "+kontrolluk;
-		document.getElementById('stopaj').innerHTML="Stopaj : "+stopaj;
-		document.getElementById('brutkdv').innerHTML="Net : "+brutkdv;
-		document.getElementById('damgaonay').innerHTML="Onay+Damga : "+damgaonay;
-		document.getElementById('sozlesmebedeli').innerHTML="Sözl. Bedeli : "+sozlesmebedeli;
-		document.getElementById('yolson').innerHTML="Yol : "+yol;
-		document.getElementById('faturaverileri').innerHTML="~ Fatura Verileri ~";
-		document.getElementById('digerveriler').innerHTML="~ Diğer Veriler ~";
-		}
-	</script>
-<script type="text/javascript">
-function yuvarla(sonuc, basamak) {
-    return Number(Math.round(sonuc+'e'+basamak)+'e-'+basamak);
-}
-</script>
-	
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-header" id="headingThree">
+							<button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+								data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+								Yol Ücreti Hesabı
+							</button>
+						</div>
+						<div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+							data-parent="#accordionHesapla">
+							<div class="card-body">
+								<!-- Yol Ücreti Kısmı Başlangıç -->
+								<div class="card-body">
+								</div>
+								<h6 class="text-center">Buraya Yol Ücreti Hesaplama Kısmı Gelecek</a></h6>
+								<!-- Yol Ücreti brüt ücret Kısmı Son -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Sol Taraf Son -->
+
+			<!-- Sağ Taraf Başlangıç -->
+			<!-- İsim ve logo kısmı başlangıç -->
+			<div class="col-lg-5 mx-auto">
+				<div class="col">
+					<div class="card card-blok my-5">
+						<div class="card-body text-center">
+							<div>2020 ~ <a href="https://gorkemtabak.blogspot.com">Görkem Tabak</a></div>
+							<div>30.05.2020 ~ ver.0.2.2</div>
+							<div>gorkemtabak@gmail.com</div>
+						</div>
+					</div>
+				</div>
+				<!-- İsim ve logo kısmı son -->
+
+				<!-- Ayarlar Sekmesi Başlangıç -->
+				<div class="col">
+					<!-- ayarlar sekmesi accordion kodu başlangıcı -->
+					<div class="accordion card card-blok my-5" id="accordionAyarlar">
+						<div class="card">
+							<div class="card-header" id="ayarlarOne">
+								<button class="btn btn-link" type="button" data-toggle="collapse"
+									data-target="#ayarlar1" aria-expanded="true" aria-controls="ayarlar1">
+									Genel Uygulama Ayarları
+								</button>
+							</div>
+							<div id="ayarlar1" class="collapse show" aria-labelledby="ayarlarOne"
+								data-parent="#accordionAyarlar">
+								<div class="card-body">
+									<!-- Genel Uygulama Ayarları Başlangıç -->
+									<div class="card-body">
+									</div>
+									<h6 class="text-center">111111</a></h6>
+									<!-- Genel Uygulama Ayarları Son -->
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-header" id="ayarlarTwo">
+								<button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+									data-target="#ayarlar2" aria-expanded="false" aria-controls="ayarlar2">
+									TKGM Ayarlar
+								</button>
+							</div>
+							<div id="ayarlar2" class="collapse" aria-labelledby="ayarlarTwo"
+								data-parent="#accordionAyarlar">
+								<div class="card-body">
+									<!--TKGM Ayarlar Başlangıç -->
+									<div class="card-body">
+									</div>
+									<h6 class="text-center">2222222</a></h6>
+									<!-- TKGM Ayarlar Son -->
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-header" id="ayarlarThree">
+								<button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+									data-target="#ayarlar3" aria-expanded="false" aria-controls="ayarlar3">
+									HKMO Ayarlar
+								</button>
+							</div>
+							<div id="ayarlar3" class="collapse" aria-labelledby="ayarlarThree"
+								data-parent="#accordionAyarlar">
+								<div class="card-body">
+									<!-- HKMO Ayarlar Başlangıç -->
+									<div class="card-body">
+									</div>
+									<h6 class="text-center">3333333</a></h6>
+									<!-- HKMO Ayarlar Son -->
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- ayarlar sekmesi accordion kodu sonu -->
+				</div>
+				<!-- ayarlar sekmesi sonu -->
+			</div>
+			<!-- Sağ Taraf Son -->
+		</div>
+	</div>
+	<!-- end body -->
+	<script src="./js/app.js"></script>
+	<script src="./js/hesaplamalar.js"></script>
+
 </body>
 
 </html>
