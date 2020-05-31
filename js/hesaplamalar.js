@@ -79,7 +79,8 @@ function aplikasyonbrut(parselalanapl) {
 
 function FormOnLoad() {
     if (typeof(Storage) != "undefined") {
-        // Verilere Erişme Genel Ayarlar Kısmı
+        // Verilere Erişme
+        // Genel Ayarlarının Yüklenmesi
         document.getElementById("ayarlarSozlesmeBedeliDurum").checked = JSON.parse(localStorage.getItem("ayarSozlesmeBedeliDurum"));
         document.getElementById("ayarlarYuvarlamaDurum").checked = JSON.parse(localStorage.getItem("ayarYuvarlamaKatDurum"));
 
@@ -91,6 +92,36 @@ function FormOnLoad() {
         document.getElementById("ayarlarKontrolluk").value = localStorage.getItem("ayarKontrolluk");
         document.getElementById("ayarlarYakitlt").value = localStorage.getItem("ayarYakitlt");
         document.getElementById("ayarlarYakitkm").value = localStorage.getItem("ayarYakitkm");
+
+        // TKGM Ayarlarının Yüklenmesi
+        document.getElementById("ayarlarApl1").value=localStorage.getItem("ayarApl1");
+        document.getElementById("ayarlarApl2").value=localStorage.getItem("ayarApl2");
+        document.getElementById("ayarlarApl3").value=localStorage.getItem("ayarApl3");
+        document.getElementById("ayarlarApl4").value=localStorage.getItem("ayarApl4");
+        document.getElementById("ayarlarApl5").value=localStorage.getItem("ayarApl5");
+        document.getElementById("ayarlarApl6").value=localStorage.getItem("ayarApl6");
+        document.getElementById("ayarlarApl7").value=localStorage.getItem("ayarApl7");
+        document.getElementById("ayarlarApl8").value=localStorage.getItem("ayarApl8");
+        document.getElementById("ayarlarApl9").value=localStorage.getItem("ayarApl9");
+        document.getElementById("ayarlarApl10").value=localStorage.getItem("ayarApl10");
+        document.getElementById("ayarlarAply1").value=localStorage.getItem("ayarAply1");
+        document.getElementById("ayarlarAply2").value=localStorage.getItem("ayarAply2");
+        document.getElementById("ayarlarCins1").value=localStorage.getItem("ayarCins1");
+        document.getElementById("ayarlarCins2").value=localStorage.getItem("ayarCins2");
+        document.getElementById("ayarlarCins3").value=localStorage.getItem("ayarCins3");
+        document.getElementById("ayarlarCins4").value=localStorage.getItem("ayarCins4");
+        document.getElementById("ayarlarCins5").value=localStorage.getItem("ayarCins5");
+        document.getElementById("ayarlarCins6").value=localStorage.getItem("ayarCins6");
+        document.getElementById("ayarlarCins7").value=localStorage.getItem("ayarCins7");
+        document.getElementById("ayarlarCins8").value=localStorage.getItem("ayarCins8");
+        document.getElementById("ayarlarBirl1").value=localStorage.getItem("ayarBirl1");
+        document.getElementById("ayarlarBirl2").value=localStorage.getItem("ayarBirl2");
+        document.getElementById("ayarlarIrt1").value=localStorage.getItem("ayarIrt1");
+        document.getElementById("ayarlarIrt2").value=localStorage.getItem("ayarIrt2");
+        document.getElementById("ayarlarBbd1").value=localStorage.getItem("ayarBbd1");
+        document.getElementById("ayarlarBbd2").value=localStorage.getItem("ayarBbd2");
+        document.getElementById("ayarlarZtt1").value=localStorage.getItem("ayarZtt1");
+        document.getElementById("ayarlarZtt2").value=localStorage.getItem("ayarZtt2");
     } else {
         
     }
@@ -108,6 +139,7 @@ function genelayarkaydet() {
     kontrollukKatsayi=document.getElementById("ayarlarKontrolluk").value;
     yakitltKatsayi=document.getElementById("ayarlarYakitlt").value;
     yakitkmKatsayi=document.getElementById("ayarlarYakitkm").value;
+
     // Eğer Browserın desteği yoksa hata verecek
     if (typeof(Storage) != "undefined") {
         // Verileri Depolama
@@ -125,4 +157,74 @@ function genelayarkaydet() {
     } else {
         document.getElementById("hatagenelayar").innerHTML = "Tarayıcınızda Local Storage Özelliği Bulunmadığı için bunu kullanamazsınız!!!";
     }
+}
+
+function tkgmayarkaydet() {
+    apl1=document.getElementById("ayarlarApl1").value;
+    apl2=document.getElementById("ayarlarApl2").value;
+    apl3=document.getElementById("ayarlarApl3").value;
+    apl4=document.getElementById("ayarlarApl4").value;
+    apl5=document.getElementById("ayarlarApl5").value;
+    apl6=document.getElementById("ayarlarApl6").value;
+    apl7=document.getElementById("ayarlarApl7").value;
+    apl8=document.getElementById("ayarlarApl8").value;
+    apl9=document.getElementById("ayarlarApl9").value;
+    apl10=document.getElementById("ayarlarApl10").value;
+    aply1=document.getElementById("ayarlarAply1").value;
+    aply2=document.getElementById("ayarlarAply2").value;
+    cins1=document.getElementById("ayarlarCins1").value;
+    cins2=document.getElementById("ayarlarCins2").value;
+    cins3=document.getElementById("ayarlarCins3").value;
+    cins4=document.getElementById("ayarlarCins4").value;
+    cins5=document.getElementById("ayarlarCins5").value;
+    cins6=document.getElementById("ayarlarCins6").value;
+    cins7=document.getElementById("ayarlarCins7").value;
+    cins8=document.getElementById("ayarlarCins8").value;
+    birl1=document.getElementById("ayarlarBirl1").value;
+    birl2=document.getElementById("ayarlarBirl2").value;
+    irt1=document.getElementById("ayarlarIrt1").value;
+    irt2=document.getElementById("ayarlarIrt2").value;
+    bbd1=document.getElementById("ayarlarBbd1").value;
+    bbd2=document.getElementById("ayarlarBbd2").value;
+    ztt1=document.getElementById("ayarlarZtt1").value;
+    ztt2=document.getElementById("ayarlarZtt2").value;
+
+    // document.getElementById("ayarlarSozlesmeBedeli").value = localStorage.getItem("ayarSozlesmeBedeli");
+
+    // Eğer Browserın desteği yoksa hata verecek
+    if (typeof(Storage) != "undefined") {
+        // Verileri Depolama
+        localStorage.setItem("ayarApl1", apl1);
+        localStorage.setItem("ayarApl2", apl2);
+        localStorage.setItem("ayarApl3", apl3);
+        localStorage.setItem("ayarApl4", apl4);
+        localStorage.setItem("ayarApl5", apl5);
+        localStorage.setItem("ayarApl6", apl6);
+        localStorage.setItem("ayarApl7", apl7);
+        localStorage.setItem("ayarApl8", apl8);
+        localStorage.setItem("ayarApl9", apl9);
+        localStorage.setItem("ayarApl10", apl10);
+        localStorage.setItem("ayarAply1", aply1);
+        localStorage.setItem("ayarAply2", aply2);
+        localStorage.setItem("ayarCins1", cins1);
+        localStorage.setItem("ayarCins2", cins2);
+        localStorage.setItem("ayarCins3", cins3);
+        localStorage.setItem("ayarCins4", cins4);
+        localStorage.setItem("ayarCins5", cins5);
+        localStorage.setItem("ayarCins6", cins6);
+        localStorage.setItem("ayarCins7", cins7);
+        localStorage.setItem("ayarCins8", cins8);
+        localStorage.setItem("ayarBirl1", birl1);
+        localStorage.setItem("ayarBirl2", birl2);
+        localStorage.setItem("ayarIrt1", irt1);
+        localStorage.setItem("ayarIrt2", irt2);
+        localStorage.setItem("ayarBbd1", bbd1);
+        localStorage.setItem("ayarBbd2", bbd2);
+        localStorage.setItem("ayarZtt1", ztt1);
+        localStorage.setItem("ayarZtt2", ztt2);
+
+    } else {
+        document.getElementById("hatatkgmayar").innerHTML = "Tarayıcınızda Local Storage Özelliği Bulunmadığı için bunu kullanamazsınız!!!";
+    }
+
 }
