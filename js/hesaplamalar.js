@@ -149,6 +149,38 @@ function aplikasyonbrut(parselalanapl) {
 
 }
 
+function yapilihalegelmebrut(yapitabanalanicins) {
+    //Formülasyon aşağıdaki şekilde yapılırsa otomasyonla uyumlu oluyor
+    yapitabanalanicins = Number(document.getElementById("yapitabanalanicins").value);
+    var ilavebinacins = Number(document.getElementById("ilavebinacins").value);
+    var nitelikkatsayicins = nitelik(document.getElementById("nitelikcins").value);
+
+    var sehircins = localStorage.getItem("ayarSehir");
+    var yapilihalegelmebrut;
+
+    if (ilavebinacins == '' || ilavebinacins == null) {
+        ilavebinacins = 0;
+    }
+
+    if (yapitabanalanicins<=500) {
+        var tabanalani = (Number(localStorage.getItem("ayarCins1"))/1.18)*sehircins*nitelikkatsayicins;
+        var ilavebina = (Number(localStorage.getItem("ayarCins3"))/1.18)*ilavebinacins;
+        yapilihalegelmebrut = tabanalani+ilavebina;
+    }
+    else if (yapitabanalanicins>500) {
+        var herbirmetreicin = yapitabanalanicins - 500;
+        var tabanalani = (Number(localStorage.getItem("ayarCins1"))/1.18)*sehircins*nitelikkatsayicins;
+        var ilavetabanalani = (Number(localStorage.getItem("ayarCins2"))/1.18)*sehircins*nitelikkatsayicins*herbirmetreicin;
+        var ilavebina = (Number(localStorage.getItem("ayarCins3"))/1.18)*ilavebinacins;
+        yapilihalegelmebrut = tabanalani+ilavebina+ilavetabanalani;
+    }
+    //TARIMSAL YAPI KISMI EKLENECEK
+    // !!!!
+    yapilihalegelmebrut = yuvarla(yapilihalegelmebrut, 2);
+    document.getElementById('brutyapilicins').innerHTML=yapilihalegelmebrut;
+    document.getElementById("brut").value=yapilihalegelmebrut;
+}
+
 function FormOnLoad() {
     if (typeof(Storage) != "undefined") {
         // Verilere Erişme
