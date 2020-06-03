@@ -277,18 +277,90 @@
 								</div>
 								<p></p>
 								<button class="btn btn-info btn-block" data-toggle="collapse" data-target="#islem2"
-									aria-expanded="false" aria-controls="islem2">Birleştirme</button>
+									aria-expanded="false" aria-controls="islem2">Cins Değişikliği</button>
 								<div id="islem2" style="margin-top:10px; margin-bottom:10px;" class="collapse">
 									<div class="card-body">
-										Birleştirme
+
+										<form method="post">
+											<div class="form-label-group">
+												<input type="number" id="yapitabanalanicins" name="yapitabanalanicins"
+													class="form-control" placeholder="Yapı Taban Alanı" required autofocus>
+												<label for="yapitabanalanicins">Yapı Taban Alanı</label>
+											</div>
+
+											<div class="form-label-group">
+												<input type="number" id="ilavebinacins" name="ilavebinacins"
+													class="form-control" placeholder="İlave Bina Sayısı" required autofocus>
+												<label for="ilavebinacins">İlave Bina Sayısı</label>
+											</div>
+
+											<div class="form-label-group">
+												<select class="form-control" id="nitelikcins" name="nitelikcins"
+													class="form-control" placeholder="Nitelik" required autofocus>
+													<option>İmar Parseli (1/1)</option>
+													<option>Belediye İçinde Kadastro Parseli (2/3)</option>
+													<option>Belediye Dışında Kadastro Parseli (1/3)</option>
+												</select>
+											</div>
+
+											<div class="custom-control custom-checkbox mb-3">
+												<input class="custom-control-input" type="checkbox" value="tarimsalyapicins" id="tarimsalyapicins">
+												<label class="custom-control-label" for="tarimsalyapicins">Yapı-Yapılar Tarımsal Amaçlı</label>
+											</div>
+
+											<input type="button" onclick="yapilihalegelmebrut();"
+												class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2"
+												value="Brüt Hesapla" name="btncinsHesapla" id="btncinsHesapla">
+										</form>
+
+										<table class="table table-hover" style="margin-top:40px; table-layout:fixed;">
+											<tbody>
+												<tr>
+													<td class="text-right font-italic">Yapılı Hale Gelme :</td>
+													<td class="text-left font-weight-bold">
+														<div id="brutyapilicins"></div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+
+										<table class="table table-hover" style="margin-top:60px; table-layout:fixed;">
+											<tbody>
+												<tr>
+													<td class="text-right font-italic">Yapısız Hale Gelme :</td>
+													<td class="text-left font-weight-bold">
+														<div id="brutyapisizcins"></div>
+													</td>
+												</tr>
+												<tr>
+													<td class="text-right font-italic">Vasıf Değişikliği :</td>
+													<td class="text-left font-weight-bold">
+														<div id="brutvasifcins"></div>
+													</td>
+												</tr>
+												<tr>
+													<td class="text-right font-italic">Vasıf Değ.+Arazi :</td>
+													<td class="text-left font-weight-bold">
+														<div id="brutvasifarazicins"></div>
+													</td>
+													<tr>
+														<td class="text-right font-italic">Kat İlavesi :</td>
+														<td class="text-left font-weight-bold">
+															<div id="brutkatilavesicins"></div>
+														</td>
+													</tr>
+												</tr>
+											</tbody>
+										</table>
+
 									</div>
 								</div>
 								<p></p>
 								<button class="btn btn-info btn-block" data-toggle="collapse" data-target="#islem3"
-									aria-expanded="false" aria-controls="islem3">Cins Değişikliği</button>
+									aria-expanded="false" aria-controls="islem3">Birleştirme</button>
 								<div id="islem3" style="margin-top:10px; margin-bottom:10px;" class="collapse">
 									<div class="card-body">
-										Cins Değişikliği
+										Birleştirme
 									</div>
 								</div>
 								<p></p>
