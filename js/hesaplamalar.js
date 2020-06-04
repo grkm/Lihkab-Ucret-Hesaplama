@@ -70,12 +70,21 @@ function nitelik(durum){
     }
 }
 
+function enazkontrol(islem){
+    var enaz = yuvarla(Number(localStorage.getItem("ayarEnAzUcret"))/1.18, 2);
+    var hesaplanan  = islem;
+    if(islem > 0 && islem < enaz) {
+        return enaz;
+    }
+    else {
+        return hesaplanan;
+    }
+}
+
 function aplikasyonbrut(parselalanapl) {
+    //Aplikasyon için otomasyonla uyumlu çalışan kod yapısı
     parselalanapl=Number(document.getElementById("parselalanapl").value);
-    // document.getElementById('brutapl').innerHTML=nitelikapl;
     var nitelikkatsayi = nitelik(document.getElementById("nitelikapl").value);
-    //document.getElementById('brutapl').innerHTML=nitelikkatsayi;
-    //if (parselalanapl != "undefined") {}
     var sehir = localStorage.getItem("ayarSehir");
     var aplikasyonbrut;
 
@@ -125,14 +134,15 @@ function aplikasyonbrut(parselalanapl) {
         aplikasyonbrut = aplikasyonbrut + aplikasyonbrut2;    
     }
 
+    aplikasyonbrut = enazkontrol(aplikasyonbrut);
     aplikasyonbrut = yuvarla(aplikasyonbrut, 2);
     document.getElementById('brutapl').innerHTML=aplikasyonbrut;
     document.getElementById("brut").value=aplikasyonbrut;
-
+    //Aplikasyon fonksiyonu tamamlandı...
 }
 
 function yapilihalegelmebrut(yapitabanalanicins) {
-    //Formülasyon aşağıdaki şekilde yapılırsa otomasyonla uyumlu oluyor
+    //Cins Değişikliği için otomasyonla uyumlu çalışan kod yapısı
     yapitabanalanicins = Number(document.getElementById("yapitabanalanicins").value);
     var ilavebinacins = Number(document.getElementById("ilavebinacins").value);
     var nitelikkatsayicins = nitelik(document.getElementById("nitelikcins").value);
@@ -158,9 +168,17 @@ function yapilihalegelmebrut(yapitabanalanicins) {
     }
     //TARIMSAL YAPI KISMI EKLENECEK
     // !!!!
+    tarimsalyapidurum = document.getElementById("tarimsalyapicins");
+    var tarimsaltavan = yuvarla(Number(localStorage.getItem("ayarCins8"))/1.18, 2);
+    if(tarimsalyapidurum.checked == true && yapilihalegelmebrut > tarimsaltavan) {
+        yapilihalegelmebrut = tarimsaltavan;
+    }
+    
+    yapilihalegelmebrut = enazkontrol(yapilihalegelmebrut);
     yapilihalegelmebrut = yuvarla(yapilihalegelmebrut, 2);
     document.getElementById('brutyapilicins').innerHTML=yapilihalegelmebrut;
     document.getElementById("brut").value=yapilihalegelmebrut;
+    
 }
 
 function FormOnLoad() {
@@ -210,6 +228,11 @@ function FormOnLoad() {
         document.getElementById("ayarlarZtt2").value=localStorage.getItem("ayarZtt2");
 
         document.getElementById("ayarlarEnAzUcret").value=localStorage.getItem("ayarEnAzUcret");
+
+        document.getElementById("brutyapisizcins").innerHTML=yuvarla((Number(localStorage.getItem("ayarCins5"))/1.18),2);
+        document.getElementById("brutvasifcins").innerHTML=yuvarla((Number(localStorage.getItem("ayarCins6"))/1.18),2);
+        document.getElementById("brutvasifarazicins").innerHTML=yuvarla(((Number(localStorage.getItem("ayarCins7"))+Number(localStorage.getItem("ayarCins6")))/1.18),2);
+        document.getElementById("brutkatilavesicins").innerHTML=yuvarla((Number(localStorage.getItem("ayarCins4"))/1.18),2);
     } else {
         
     }
@@ -313,7 +336,7 @@ function tkgmayarkaydet() {
         localStorage.setItem("ayarZtt1", ztt1);
         localStorage.setItem("ayarZtt2", ztt2);
 
-        localStorage.setItem("ayarEnAzUcret", apl1);
+        localStorage.setItem("ayarEnAzUcret", enazucret);
 
     } else {
         document.getElementById("hatatkgmayar").innerHTML = "Tarayıcınızda Local Storage Özelliği Bulunmadığı için bunu kullanamazsınız!!!";
