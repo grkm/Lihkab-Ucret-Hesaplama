@@ -82,56 +82,38 @@ function aplikasyonbrut(parselalanapl) {
     if(parselalanapl<=1000)
     {
         aplikasyonbrut = (Number(localStorage.getItem("ayarApl1"))/1.18)*sehir*nitelikkatsayi;
-        aplikasyonbrut = yuvarla(aplikasyonbrut, 2);
-        document.getElementById('brutapl').innerHTML=aplikasyonbrut;
     }
     else if(1000<parselalanapl & parselalanapl<=3000)
     {
         aplikasyonbrut = (Number(localStorage.getItem("ayarApl2"))/1.18)*sehir*nitelikkatsayi;
-        aplikasyonbrut = yuvarla(aplikasyonbrut, 2);
-        document.getElementById('brutapl').innerHTML=aplikasyonbrut;
     }
     else if(3000<parselalanapl & parselalanapl<=5000)
     {
         aplikasyonbrut = (Number(localStorage.getItem("ayarApl3"))/1.18)*sehir*nitelikkatsayi;
-        aplikasyonbrut = yuvarla(aplikasyonbrut, 2);
-        document.getElementById('brutapl').innerHTML=aplikasyonbrut;
     }
     else if(5000<parselalanapl & parselalanapl<=10000)
     {
         aplikasyonbrut = (Number(localStorage.getItem("ayarApl4"))/1.18)*sehir*nitelikkatsayi;
-        aplikasyonbrut = yuvarla(aplikasyonbrut, 2);
-        document.getElementById('brutapl').innerHTML=aplikasyonbrut;
     }
     else if(10000<parselalanapl & parselalanapl<=20000)
     {
         aplikasyonbrut = (Number(localStorage.getItem("ayarApl5"))/1.18)*sehir*nitelikkatsayi;
-        aplikasyonbrut = yuvarla(aplikasyonbrut, 2);
-        document.getElementById('brutapl').innerHTML=aplikasyonbrut;
     }
     else if(20000<parselalanapl & parselalanapl<=50000)
     {
         aplikasyonbrut = (Number(localStorage.getItem("ayarApl6"))/1.18)*sehir*nitelikkatsayi;
-        aplikasyonbrut = yuvarla(aplikasyonbrut, 2);
-        document.getElementById('brutapl').innerHTML=aplikasyonbrut;
     }
     else if(50000<parselalanapl & parselalanapl<=100000)
     {
         aplikasyonbrut = (Number(localStorage.getItem("ayarApl7"))/1.18)*sehir*nitelikkatsayi;
-        aplikasyonbrut = yuvarla(aplikasyonbrut, 2);
-        document.getElementById('brutapl').innerHTML=aplikasyonbrut;
     }
     else if(100000<parselalanapl & parselalanapl<=200000)
     {
         aplikasyonbrut = (Number(localStorage.getItem("ayarApl8"))/1.18)*sehir*nitelikkatsayi;
-        aplikasyonbrut = yuvarla(aplikasyonbrut, 2);
-        document.getElementById('brutapl').innerHTML=aplikasyonbrut;
     }
     else if(200000<parselalanapl & parselalanapl<=500000)
     {
         aplikasyonbrut = (Number(localStorage.getItem("ayarApl9"))/1.18)*sehir*nitelikkatsayi;
-        aplikasyonbrut = yuvarla(aplikasyonbrut, 2);
-        document.getElementById('brutapl').innerHTML=aplikasyonbrut;
     }
     else if(500000<parselalanapl)
     {
@@ -140,11 +122,11 @@ function aplikasyonbrut(parselalanapl) {
         var kactane100000 = Math.ceil((( parselalanapl - 500000 )/100000));
         var aplikasyonbrut2 = (Number(localStorage.getItem("ayarApl10"))/1.18)*sehir*nitelikkatsayi*kactane100000;
         aplikasyonbrut2 = yuvarla(aplikasyonbrut2, 2);
-        aplikasyonbrut = aplikasyonbrut + aplikasyonbrut2;
-        aplikasyonbrut = yuvarla(aplikasyonbrut, 2);
-        document.getElementById('brutapl').innerHTML=aplikasyonbrut;
+        aplikasyonbrut = aplikasyonbrut + aplikasyonbrut2;    
     }
-    
+
+    aplikasyonbrut = yuvarla(aplikasyonbrut, 2);
+    document.getElementById('brutapl').innerHTML=aplikasyonbrut;
     document.getElementById("brut").value=aplikasyonbrut;
 
 }
@@ -226,6 +208,8 @@ function FormOnLoad() {
         document.getElementById("ayarlarBbd2").value=localStorage.getItem("ayarBbd2");
         document.getElementById("ayarlarZtt1").value=localStorage.getItem("ayarZtt1");
         document.getElementById("ayarlarZtt2").value=localStorage.getItem("ayarZtt2");
+
+        document.getElementById("ayarlarEnAzUcret").value=localStorage.getItem("ayarEnAzUcret");
     } else {
         
     }
@@ -293,6 +277,8 @@ function tkgmayarkaydet() {
     ztt1=document.getElementById("ayarlarZtt1").value;
     ztt2=document.getElementById("ayarlarZtt2").value;
 
+    enazucret=document.getElementById("ayarlarEnAzUcret").value;
+
     // document.getElementById("ayarlarSozlesmeBedeli").value = localStorage.getItem("ayarSozlesmeBedeli");
 
     // Eğer Browserın desteği yoksa hata verecek
@@ -326,6 +312,8 @@ function tkgmayarkaydet() {
         localStorage.setItem("ayarBbd2", bbd2);
         localStorage.setItem("ayarZtt1", ztt1);
         localStorage.setItem("ayarZtt2", ztt2);
+
+        localStorage.setItem("ayarEnAzUcret", apl1);
 
     } else {
         document.getElementById("hatatkgmayar").innerHTML = "Tarayıcınızda Local Storage Özelliği Bulunmadığı için bunu kullanamazsınız!!!";
