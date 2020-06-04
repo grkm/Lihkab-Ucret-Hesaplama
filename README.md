@@ -1,5 +1,4 @@
 # Lihkab Ücret Hesabı
 
-html css bootstrap javascript ve pwa ile hazırlanmış ücret hesaplama aracı.
+Geliştirilmektedir.
 
-Not: Kararlı sürüm değildir. Test Aşamasındadır.
