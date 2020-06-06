@@ -166,8 +166,7 @@ function yapilihalegelmebrut(yapitabanalanicins) {
         var ilavebina = (Number(localStorage.getItem("ayarCins3"))/1.18)*ilavebinacins;
         yapilihalegelmebrut = tabanalani+ilavebina+ilavetabanalani;
     }
-    //TARIMSAL YAPI KISMI EKLENECEK
-    // !!!!
+
     tarimsalyapidurum = document.getElementById("tarimsalyapicins");
     var tarimsaltavan = yuvarla(Number(localStorage.getItem("ayarCins8"))/1.18, 2);
     if(tarimsalyapidurum.checked == true && yapilihalegelmebrut > tarimsaltavan) {
@@ -178,7 +177,35 @@ function yapilihalegelmebrut(yapitabanalanicins) {
     yapilihalegelmebrut = yuvarla(yapilihalegelmebrut, 2);
     document.getElementById('brutyapilicins').innerHTML=yapilihalegelmebrut;
     document.getElementById("brut").value=yapilihalegelmebrut;
-    
+  
+}
+
+function birlestirmebrut(birlestirmepsayisi) {
+    birlestirmepsayisi = Number(document.getElementById("parselsayisibirlestirme").value);
+    var nitelikkbirlestirme = nitelik(document.getElementById("nitelikbirlestirme").value);
+    var sehirbirlestirme = localStorage.getItem("ayarSehir");
+    var ayarb1 = (Number(localStorage.getItem("ayarBirl1"))/1.18);
+    var ayarb2 = Number(localStorage.getItem("ayarBirl2"));
+    var birlestirmebrutsonuc;
+
+    // Eğer input alanına veri girilmezse 2 olarak işlem yapılacak
+    if (birlestirmepsayisi == '' || birlestirmepsayisi == null) {
+        birlestirmepsayisi = 2;
+    }
+
+    if (birlestirmepsayisi>2){
+        birlestirmebrutsonuc = ayarb1*sehirbirlestirme*nitelikkbirlestirme;
+        birlestirmebrutsonuc = birlestirmebrutsonuc+birlestirmebrutsonuc*(birlestirmepsayisi-2)*(ayarb2/100);
+    }
+
+    else {
+        birlestirmebrutsonuc = ayarb1*sehirbirlestirme*nitelikkbirlestirme;
+    }
+
+    birlestirmebrutsonuc = enazkontrol(birlestirmebrutsonuc);
+    birlestirmebrutsonuc = yuvarla(birlestirmebrutsonuc, 2);
+    document.getElementById('brutbirlestirme').innerHTML=birlestirmebrutsonuc;
+    document.getElementById("brut").value=birlestirmebrutsonuc;
 }
 
 function FormOnLoad() {
