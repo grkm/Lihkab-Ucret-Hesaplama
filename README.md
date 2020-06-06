@@ -10,22 +10,28 @@
 
 ##### 06.06.2020
 
-> - Vaziyet Planı - Bağımsız Bölüm Planı brüt ücret hesaplama eklendi
-- Röperli Kroki (TKGM) brüt ücret hesaplama eklendi
-- Zemin Tespit Tutanağı brüt ücret hesaplama eklendi
-- Yol Aplikasyonu brüt ücret hesaplama eklendi
-- İrtifak Hakkı brüt ücret hesaplama eklendi
-- Bağımsız Bölüm Düzeltme Teknik Rapor brüt ücret hesaplama eklendi
-
+```
+Vaziyet Planı - Bağımsız Bölüm Planı brüt ücret hesaplama eklendi
+Röperli Kroki (TKGM) brüt ücret hesaplama eklendi
+Zemin Tespit Tutanağı brüt ücret hesaplama eklendi
+Yol Aplikasyonu brüt ücret hesaplama eklendi
+İrtifak Hakkı brüt ücret hesaplama eklendi
+Bağımsız Bölüm Düzeltme Teknik Rapor brüt ücret hesaplama eklendi
+```
 ##### 05.06.2020
-> - Birleştirme brüt ücret hesaplama eklendi
+```
+Birleştirme brüt ücret hesaplama eklendi
+```
 
 ##### 04.06.2020
-> - Cins Değişikliği brüt ücret hesaplama eklendi
+```
+Cins Değişikliği brüt ücret hesaplama eklendi
+```
 
 ##### 30.05.2020
-> - Aplikasyon brüt ücret hesaplama eklendi
-
+```
+Aplikasyon brüt ücret hesaplama eklendi
+```
 
 ## Lisans
 [MIT](https://choosealicense.com/licenses/mit/)
