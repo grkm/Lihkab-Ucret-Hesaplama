@@ -399,7 +399,29 @@
 									aria-expanded="false" aria-controls="islem4">Bağımsız Bölüm Düzeltme</button>
 								<div id="islem4" style="margin-top:10px; margin-bottom:10px;" class="collapse">
 									<div class="card-body">
-										Bağımsız Bölüm Düzeltme
+										
+										<form method="post">
+											<div class="form-label-group">
+												<input type="number" id="bbsayisibbd" name="bbsayisibbd"
+													class="form-control" placeholder="Bağ. Böl. Sayısı" required autofocus>
+												<label for="bbsayisibbd">Bağ. Böl. Sayısı</label>
+											</div>
+
+											<input type="button" onclick="bbdbrut();"
+												class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2"
+												value="Brüt Hesapla" name="btnbbdHesapla" id="btnbbdHesapla">
+										</form>
+										<table class="table table-hover" style="margin-top:40px; table-layout:fixed;">
+											<tbody>
+												<tr>
+													<td class="text-right font-italic">Brüt Ücret :</td>
+													<td class="text-left font-weight-bold">
+														<div id="brutbbd"></div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+
 									</div>
 								</div>
 								<p></p>
@@ -407,7 +429,38 @@
 									aria-expanded="false" aria-controls="islem5">İrtifak Hakkı</button>
 								<div id="islem5" style="margin-top:10px; margin-bottom:10px;" class="collapse">
 									<div class="card-body">
-										İrtifak Hakkı
+										
+										<form method="post">
+											<div class="form-label-group">
+												<input type="number" id="parselsayisiirtifak" name="parselsayisiirtifak"
+													class="form-control" placeholder="Parsel Sayısı" required autofocus>
+												<label for="parselsayisiirtifak">Parsel Sayısı</label>
+											</div>
+
+											<div class="form-label-group">
+												<select class="form-control" id="nitelikirtifak" name="nitelikirtifak"
+													class="form-control" placeholder="Nitelik" required autofocus>
+													<option>İmar Parseli (1/1)</option>
+													<option>Belediye İçinde Kadastro Parseli (2/3)</option>
+													<option>Belediye Dışında Kadastro Parseli (1/3)</option>
+												</select>
+											</div>
+
+											<input type="button" onclick="irtifakbrut();"
+												class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2"
+												value="Brüt Hesapla" name="btnirtifakHesapla" id="btnirtifakHesapla">
+										</form>
+										<table class="table table-hover" style="margin-top:40px; table-layout:fixed;">
+											<tbody>
+												<tr>
+													<td class="text-right font-italic">Brüt Ücret :</td>
+													<td class="text-left font-weight-bold">
+														<div id="brutirtifak"></div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+
 									</div>
 								</div>
 								<p></p>
@@ -415,31 +468,152 @@
 									aria-expanded="false" aria-controls="islem6">Yol Aplikasyonu</button>
 								<div id="islem6" style="margin-top:10px; margin-bottom:10px;" class="collapse">
 									<div class="card-body">
-										Yol Aplikasyonu
+										
+										<form method="post">
+											<div class="form-label-group">
+												<input type="number" id="noktasayisiyapl" name="noktasayisiyapl"
+													class="form-control" placeholder="Nokta Sayısı" required autofocus>
+												<label for="noktasayisiyapl">Nokta Sayısı</label>
+											</div>
+
+											<input type="button" onclick="yolaplbrut();"
+												class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2"
+												value="Brüt Hesapla" name="btnyaplHesapla" id="btnyaplHesapla">
+										</form>
+										<table class="table table-hover" style="margin-top:40px; table-layout:fixed;">
+											<tbody>
+												<tr>
+													<td class="text-right font-italic">Brüt Ücret :</td>
+													<td class="text-left font-weight-bold">
+														<div id="brutyapl"></div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+
 									</div>
 								</div>
 								<p></p>
 								<button class="btn btn-info btn-block" data-toggle="collapse" data-target="#islem7"
-									aria-expanded="false" aria-controls="islem7">Vaziyet-Bağımsız</button>
+									aria-expanded="false" aria-controls="islem7">Zemin Tespit Tutanağı</button>
 								<div id="islem7" style="margin-top:10px; margin-bottom:10px;" class="collapse">
 									<div class="card-body">
-										Vaziyet-Bağımsız
+										
+										<form method="post">
+											<div class="form-label-group">
+												<input type="number" id="yapitabanalaniztt" name="yapitabanalaniztt"
+													class="form-control" placeholder="Yapı Taban Alanı" required autofocus>
+												<label for="yapitabanalaniztt">Yapı Taban Alanı</label>
+											</div>
+
+											<input type="button" onclick="zttbrut();"
+												class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2"
+												value="Brüt Hesapla" name="btnzttHesapla" id="btnzttHesapla">
+										</form>
+										<table class="table table-hover" style="margin-top:40px; table-layout:fixed;">
+											<tbody>
+												<tr>
+													<td class="text-right font-italic">Brüt Ücret :</td>
+													<td class="text-left font-weight-bold">
+														<div id="brutztt"></div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+
 									</div>
 								</div>
 								<p></p>
 								<button class="btn btn-info btn-block" data-toggle="collapse" data-target="#islem8"
-									aria-expanded="false" aria-controls="islem8">Zemin Tespit Tutanağı</button>
+									aria-expanded="false" aria-controls="islem8">Vaziyet-Bağımsız</button>
 								<div id="islem8" style="margin-top:10px; margin-bottom:10px;" class="collapse">
 									<div class="card-body">
-										Zemin Tespit Tutanağı
+										
+										<!-- Vaziyet Bağımsız Inputlar Başlangıç -->
+
+										<form method="post">
+											<div class="form-label-group">
+												<input type="number" id="parselalanivazbag" name="parselalanivazbag"
+													class="form-control" placeholder="Parsel Alanı" required autofocus>
+												<label for="parselalanivazbag">Parsel Alanı</label>
+											</div>
+											<div class="form-label-group">
+												<input type="number" id="binakatsayisivazbag" name="binakatsayisivazbag"
+													class="form-control" placeholder="Bina Kat Sayısı" required autofocus>
+												<label for="binakatsayisivazbag">Bina Kat Sayısı</label>
+											</div>
+											<div class="form-label-group">
+												<input type="number" id="ilavebinasayisivazbag" name="ilavebinasayisivazbag"
+													class="form-control" placeholder="İlave Bina Sayısı" required autofocus>
+												<label for="ilavebinasayisivazbag">İlave Bina Sayısı</label>
+											</div>
+											<div class="form-label-group">
+												<input type="number" id="bbsayisivazbag" name="bbsayisivazbag"
+													class="form-control" placeholder="Bağ. Böl. Sayısı" required autofocus>
+												<label for="bbsayisivazbag">Bağ. Böl. Sayısı</label>
+											</div>
+											<div class="custom-control custom-checkbox mb-3">
+												<input class="custom-control-input" type="checkbox" value="taksvazbag" id="taksvazbag">
+												<label class="custom-control-label" for="taksvazbag">TAKS %5, inşaat Alanı 250 m²'den küçük</label>
+											</div>
+											<div class="form-label-group">
+												<input type="number" id="ilcekatsayisivazbag" name="ilcekatsayisivazbag"
+													class="form-control" placeholder="İlçe Katsayısı" required autofocus>
+												<label for="ilcekatsayisivazbag">İlçe Katsayısı</label>
+											</div>
+
+											<input type="button" onclick="vazbagbrut();"
+												class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2"
+												value="Brüt Hesapla" name="btnvazbagHesapla" id="btnvazbagHesapla">
+										</form>
+										<table class="table table-hover" style="margin-top:40px; table-layout:fixed;">
+											<tbody>
+												<tr>
+													<td class="text-right font-italic">Brüt Ücret :</td>
+													<td class="text-left font-weight-bold">
+														<div id="brutvazbag"></div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+
+										<!-- Vaziyet Bağımsız Inputlar Son -->
+
 									</div>
 								</div>
 								<p></p>
 								<button class="btn btn-info btn-block" data-toggle="collapse" data-target="#islem9"
-									aria-expanded="false" aria-controls="islem9">Röperli Kroki</button>
+									aria-expanded="false" aria-controls="islem9">Röperli Kroki (TKGM)</button>
 								<div id="islem9" style="margin-top:10px; margin-bottom:10px;" class="collapse">
 									<div class="card-body">
-										Röperli Kroki
+										
+										<form method="post">
+											<div class="form-label-group">
+												<input type="number" id="aplbrutrpr" name="aplbrutrpr"
+													class="form-control" placeholder="Aplikasyon Brüt" required autofocus>
+												<label for="aplbrutrpr">Aplikasyon Brüt</label>
+											</div>
+											<div class="form-label-group">
+												<input type="number" id="ekbinarpr" name="ekbinarpr"
+													class="form-control" placeholder="Ek Bina Sayısı" required autofocus>
+												<label for="ekbinarpr">Ek Bina Sayısı</label>
+											</div>
+
+											<input type="button" onclick="rprbrut();"
+												class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2"
+												value="Brüt Hesapla" name="btnrprHesapla" id="btnrprHesapla">
+										</form>
+										<table class="table table-hover" style="margin-top:40px; table-layout:fixed;">
+											<tbody>
+												<tr>
+													<td class="text-right font-italic">Brüt Ücret :</td>
+													<td class="text-left font-weight-bold">
+														<div id="brutrpr"></div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+
 									</div>
 								</div>
 								<!-- İşlemlere göre brüt ücret Kısmı Son -->
@@ -723,6 +897,16 @@
 											</div>
 											<!-- Hesaplanacak En Az Ücret Son -->
 
+											<!-- Röperli Kroki Ayarlar Başlangıç -->
+											<p></p>
+											<div class="text-center">Röperli Kroki</div>
+											<p></p>
+											<div class="form-label-group">
+												<input class="form-control" type="text" placeholder="Aplikasyona Ek" id="ayarlarRpr1" name="ayarlarRpr1">
+												<label for="ayarlarRpr1">Aplikasyona Ek</label>
+											</div>
+											<!-- Röperli Kroki Ayarlar Son -->
+
 											<!-- Kaydet Buttonu -->
 											<p></p>
 											<input type="button" onclick="tkgmayarkaydet();"
@@ -751,6 +935,67 @@
 								<div class="card-body">
 									<!-- HKMO Ayarlar Başlangıç -->
 									<div class="card-body">
+										<!-- HKMO Ayarlar İçerik Başlangıç -->
+
+										<form method="post">
+											<!-- Vaziyet-Bağımsız Ayarlar Başlangıç -->
+											<div class="text-center">Vaziyet-Bağımsız</div>
+											<p></p>
+											<div class="form-label-group">
+												<input class="form-control" type="text" placeholder="Alan 0-500" id="ayarlarVbp1" name="ayarlarVbp1">
+												<label for="ayarlarVbp1">Alan 0-500</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="text" placeholder="Alan 501-1000" id="ayarlarVbp2" name="ayarlarVbp2">
+												<label for="ayarlarVbp2">Alan 501-1000</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="text" placeholder="Alan 1001-2500" id="ayarlarVbp3" name="ayarlarVbp3">
+												<label for="ayarlarVbp3">Alan 1001-2500</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="text" placeholder="Alan 2501-10000" id="ayarlarVbp4" name="ayarlarVbp4">
+												<label for="ayarlarVbp4">Alan 2501-10000</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="text" placeholder="Alan 10000" id="ayarlarVbp5" name="ayarlarVbp5">
+												<label for="ayarlarVbp5">Alan 10000</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="text" placeholder="Bina için" id="ayarlarVbp6" name="ayarlarVbp6">
+												<label for="ayarlarVbp6">Bina için</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="text" placeholder="Her kat için" id="ayarlarVbp7" name="ayarlarVbp7">
+												<label for="ayarlarVbp7">Her kat için</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="text" placeholder="Bağ. Böl. için" id="ayarlarVbp8" name="ayarlarVbp8">
+												<label for="ayarlarVbp8">Bağ. Böl. için</label>
+											</div>
+											<!-- Vaziyet-Bağımsız Ayarlar Son -->
+
+											<!-- Röperli Kroki Ayarlar HKMO Başlangıç
+											<p></p>
+											<div class="text-center">Röperli Kroki</div>
+											<p></p>
+											<div class="form-label-group">
+												<input class="form-control" type="text" placeholder="Aplikasyona Ek" id="ayarlarRpr1" name="ayarlarRpr1">
+												<label for="ayarlarRpr1">Aplikasyona Ek</label>
+											</div>
+											Röperli Kroki Ayarlar HKMO Son -->
+
+											<!-- Kaydet Buttonu -->
+											<p></p>
+											<input type="button" onclick="hkmoayarkaydet();"
+											class="btn btn-lg btn-info btn-block btn-login font-weight-bold mb-2"
+											value="Ayarları Kaydet" name="btnhkmoayarkaydet" id="btnhkmoayarkaydet">
+											
+											<div class="hatahkmoayar"></div>
+											
+										</form>
+
+										<!-- HKMO Ayarlar İçerik Son -->
 									</div>
 									<h6 class="text-center">HKMO Ayarları</a></h6>
 									<!-- HKMO Ayarlar Son -->
