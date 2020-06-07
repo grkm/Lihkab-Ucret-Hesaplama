@@ -2,11 +2,13 @@
 
 ![](https://grkm.github.io/Lihkab-Ucret-Hesaplama/img/icons/icon-128x128.png)
 
+[![License](http://img.shields.io/badge/license-MIT-blue.svg)](http://opensource.org/licenses/MIT)
 ![](https://img.shields.io/github/stars/grkm/Lihkab-Ucret-Hesaplama.svg) 
 ![](https://img.shields.io/github/forks/grkm/Lihkab-Ucret-Hesaplama.svg) 
 ![](https://img.shields.io/github/tag/grkm/Lihkab-Ucret-Hesaplama.svg) 
 ![](https://img.shields.io/github/release/grkm/Lihkab-Ucret-Hesaplama.svg) 
 ![](https://img.shields.io/github/issues/grkm/Lihkab-Ucret-Hesaplama.svg)
+
 
 ## Lisanslı Harita Kadastro Mühendislik Büroları için İşlem Ücreti Hesaplama Uygulaması
 
@@ -43,6 +45,17 @@ Cins Değişikliği brüt ücret hesaplama eklendi
 ```
 Aplikasyon brüt ücret hesaplama eklendi
 ```
+
+##### 29.05.2020 ve öncesi
+```
+Tasarım PWA uyumlu hale getirildi
+Android ve ios cihazlar için son düzeltmeler yapıldı
+Brüt ücret hesaplama fonksiyonu tamamlandı
+Ayarlar kısmı eklendi
+Ayarların kaydedilmesi için localstorage kullanılması eklendi
+Kaydedilen ayarların silinmesi,kaydedilmesi ve yüklenmesi modülü eklendi.
+```
+
 
 ## Lisans
 [MIT](https://choosealicense.com/licenses/mit/)
