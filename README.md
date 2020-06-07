@@ -16,6 +16,7 @@
 
 ##### 07.06.2020
 ```
+Mahalle ücreti hesaplama kısmı eklendi
 Yedekle\Kurtar bölümünü kullanarak tanımlı ayar ekleme kısmı eklendi 
 (0.99 bölgesel katsayı için 2020 ücretleri bu kısım ile sisteme tanımlanabilir)
 ```
