@@ -16,6 +16,47 @@ var localStorageBackup = function() {
   link.remove();
 };
 
+
+var getJSON = function(url, callback) {
+
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', url, true);
+  xhr.responseType = 'json';
+  
+  xhr.onload = function() {
+  
+      var status = xhr.status;
+      
+      if (status == 200) {
+          callback(null, xhr.response);
+      } else {
+          callback(status);
+      }
+  };
+  
+  xhr.send();
+};
+
+var urldenyukle = function(){
+
+  getJSON('https://grkm.github.io/Lihkab-Ucret-Hesaplama/backup.json',  function(err, data) {
+  
+  if (err != null) {
+      console.error(err);
+  } 
+  else 
+  {
+
+    var text = data;
+    for (var key in text){
+        var value = decodeURIComponent(unescape(text[key]));
+        window.localStorage.setItem(key, value);
+      }
+
+  }
+});
+
+}
 var localStorageRestore = function() {
   var t = document.createElement('div');
   var a = document.createElement('a');
