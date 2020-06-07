@@ -632,6 +632,30 @@
 							<div class="card-body">
 								<!-- Yol Ücreti Kısmı Başlangıç -->
 								<div class="card-body">
+
+									<form method="post">
+										<div class="text-center">Sisteme Gidiş-Dönüş Toplam Km Bilgisi Girilmeli</div>
+										<div class="form-label-group">
+											<input type="number" id="kmbilgisi" name="kmbilgisi"
+												class="form-control" placeholder="Km Bilgisi" required autofocus>
+											<label for="kmbilgisi">Km Bilgisi</label>
+										</div>
+
+										<input type="button" onclick="yolhesapla();"
+											class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2"
+											value="Yol Hesapla" name="btnyolHesapla" id="btnyolHesapla">
+									</form>
+									<table class="table table-hover" style="margin-top:40px; table-layout:fixed;">
+										<tbody>
+											<tr>
+												<td class="text-right font-italic">Yol Ücreti :</td>
+												<td class="text-left font-weight-bold">
+													<div id="sonucyol"></div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+
 								</div>
 								<h6 class="text-center">Buraya Mahalle Ücreti Hesaplama Kısmı Gelecek</a></h6>
 								<!-- Yol Ücreti brüt ücret Kısmı Son -->
