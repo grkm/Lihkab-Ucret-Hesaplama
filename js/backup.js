@@ -52,7 +52,7 @@ var urldenyukle = function(){
         var value = decodeURIComponent(unescape(text[key]));
         window.localStorage.setItem(key, value);
       }
-
+      alert('Yüklenen ' + Object.keys(text).length + ' tane veri sisteme eklendi.');
   }
 });
 
