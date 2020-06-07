@@ -91,6 +91,17 @@ function enazkontrol(islem){
     }
 }
 
+function yolhesapla(km){
+    km=Number(document.getElementById("kmbilgisi").value);
+    var yolkatsayi = Number(localStorage.getItem("ayarYakitkm"));
+    var yolyakitlt = Number(localStorage.getItem("ayarYakitlt"))
+    yolsonuc=km*yolkatsayi*yolyakitlt;
+
+    yolsonuc = yuvarla(yolsonuc, 2);
+    document.getElementById('sonucyol').innerHTML=yolsonuc;
+    document.getElementById("yol").value=yolsonuc;
+}
+
 function aplikasyonbrut(parselalanapl) {
     parselalanapl=Number(document.getElementById("parselalanapl").value);
     var nitelikkatsayi = nitelik(document.getElementById("nitelikapl").value);
