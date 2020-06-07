@@ -46,5 +46,16 @@ Cins Değişikliği brüt ücret hesaplama eklendi
 Aplikasyon brüt ücret hesaplama eklendi
 ```
 
+##### 29.05.2020 ve öncesi
+```
+Tasarım PWA uyumlu hale getirildi
+Android ve ios cihazlar için son düzeltmeler yapıldı
+Brüt ücret hesaplama fonksiyonu tamamlandı
+Ayarlar kısmı eklendi
+Ayarların kaydedilmesi için localstorage kullanılması eklendi
+Kaydedilen ayarların silinmesi,kaydedilmesi ve yüklenmesi modülü eklendi.
+```
+
+
 ## Lisans
 [MIT](https://choosealicense.com/licenses/mit/)
