@@ -2,11 +2,21 @@
 
 ![](https://grkm.github.io/Lihkab-Ucret-Hesaplama/img/icons/icon-128x128.png)
 
-![](https://img.shields.io/github/stars/grkm/Lihkab-Ucret-Hesaplama.svg) ![](https://img.shields.io/github/forks/grkm/Lihkab-Ucret-Hesaplama.svg) ![](https://img.shields.io/github/tag/grkm/Lihkab-Ucret-Hesaplama.svg) ![](https://img.shields.io/github/release/grkm/Lihkab-Ucret-Hesaplama.svg) ![](https://img.shields.io/github/issues/grkm/Lihkab-Ucret-Hesaplama.svg)
+![](https://img.shields.io/github/stars/grkm/Lihkab-Ucret-Hesaplama.svg) 
+![](https://img.shields.io/github/forks/grkm/Lihkab-Ucret-Hesaplama.svg) 
+![](https://img.shields.io/github/tag/grkm/Lihkab-Ucret-Hesaplama.svg) 
+![](https://img.shields.io/github/release/grkm/Lihkab-Ucret-Hesaplama.svg) 
+![](https://img.shields.io/github/issues/grkm/Lihkab-Ucret-Hesaplama.svg)
 
 ## Lisanslı Harita Kadastro Mühendislik Büroları için İşlem Ücreti Hesaplama Uygulaması
 
 #### En Son Yapılana Eklemeler-Güncellemeler
+
+##### 07.06.2020
+```
+Yedekle\Kurtar bölümünü kullanarak tanımlı ayar ekleme kısmı eklendi 
+(0.99 bölgesel katsayı için 2020 ücretleri bu kısım ile sisteme tanımlanabilir)
+```
 
 ##### 06.06.2020
 
@@ -18,6 +28,7 @@ Yol Aplikasyonu brüt ücret hesaplama eklendi
 İrtifak Hakkı brüt ücret hesaplama eklendi
 Bağımsız Bölüm Düzeltme Teknik Rapor brüt ücret hesaplama eklendi
 ```
+
 ##### 05.06.2020
 ```
 Birleştirme brüt ücret hesaplama eklendi
