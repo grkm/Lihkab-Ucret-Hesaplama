@@ -8,6 +8,11 @@
 
 #### En Son Yapılana Eklemeler-Güncellemeler
 
+##### 07.06.2020
+```
+Yedekle\Kurtar bölümünü kullanarak tanımlı ayar ekleme kısmı eklendi (0.99 bölgesel katsayı için 2020 ücretleri bu kısım ile sisteme tanımlanabilir)
+```
+
 ##### 06.06.2020
 
 ```
@@ -18,6 +23,7 @@ Yol Aplikasyonu brüt ücret hesaplama eklendi
 İrtifak Hakkı brüt ücret hesaplama eklendi
 Bağımsız Bölüm Düzeltme Teknik Rapor brüt ücret hesaplama eklendi
 ```
+
 ##### 05.06.2020
 ```
 Birleştirme brüt ücret hesaplama eklendi
