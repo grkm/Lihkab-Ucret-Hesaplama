@@ -57,6 +57,37 @@ var urldenyukle = function(){
 });
 
 }
+
+var urldenlocalstoragekontrol = function(){
+
+  getJSON('https://grkm.github.io/Lihkab-Ucret-Hesaplama/backup.json',  function(err, data) {
+  
+  if (err != null) {
+      console.error(err);
+  } 
+  else 
+  {
+    var sayac = "0";
+    var text = data;
+    for (var key in text){
+        var value = decodeURIComponent(unescape(text[key]));
+        //window.localStorage.setItem(key, value);
+        if(localStorage.getItem(key)===null) {
+          window.localStorage.setItem(key, value);
+          sayac=sayac+1;
+       }
+      }
+      if(sayac!=0){
+        alert((Object.keys(sayac).length-1) + ' tane boş veri tanımlı ayarlardan düzeltildi.');
+      }
+      else {
+
+      }
+      
+  }
+});
+}
+
 var localStorageRestore = function() {
   var t = document.createElement('div');
   var a = document.createElement('a');
