@@ -385,6 +385,8 @@ function vazbagbrut(){
 
 function FormOnLoad() {
     if (typeof(Storage) != "undefined") {
+        //console.log(localStorage.length);
+        urldenlocalstoragekontrol();
         // Verilere Erişme
         // Genel Ayarlarının Yüklenmesi
         document.getElementById("ayarlarSozlesmeBedeliDurum").checked = JSON.parse(localStorage.getItem("ayarSozlesmeBedeliDurum"));
