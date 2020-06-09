@@ -52,7 +52,7 @@ var urldenyukle = function(){
         var value = decodeURIComponent(unescape(text[key]));
         window.localStorage.setItem(key, value);
       }
-      alert('Yüklenen ' + Object.keys(text).length + ' tane veri sisteme eklendi.');
+      alert('Yüklenen ' + Object.keys(text).length + ' tane veri sisteme eklendi. Lütfen sayfayı yenileyiniz.');
   }
 });
 
@@ -78,7 +78,7 @@ var urldenlocalstoragekontrol = function(){
        }
       }
       if(sayac!=0){
-        alert((Object.keys(sayac).length-1) + ' tane boş veri tanımlı ayarlardan düzeltildi.');
+        alert((Object.keys(sayac).length-1) + ' tane boş veri tanımlı ayarlardan düzeltildi. Lütfen sayfayı yenileyiniz.');
       }
       else {
 
