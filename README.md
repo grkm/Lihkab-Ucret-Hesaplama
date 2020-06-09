@@ -14,6 +14,12 @@
 
 #### En Son Yapılana Eklemeler-Güncellemeler
 
+##### 10.06.2020
+```
+Sistem otomatik tanımlı ayarları yüklüyor
+Boş kayıtlar tanımlı yedek dosyadan otomatik olarak düzeltiliyor.
+```
+
 ##### 07.06.2020
 ```
 Mahalle ücreti hesaplama kısmı eklendi
