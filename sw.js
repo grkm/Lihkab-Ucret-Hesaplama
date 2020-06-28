@@ -2,48 +2,31 @@ const staticCacheName = 'site-static';
 const assets = [
 	'/',
     '/index.html',
-    '/deneme.html',
+	'/ayarlar.html',
+	'/hakkinda.html',
+    '/iletisim.html',
+    '/kullanim.html',
+    '/backup.json',
+    '/ornek.json',
+	'/readme.md',
     '/js/app.js',
     '/js/hesaplamalar.js',
     '/js/backup.js',
+	'/js/bootstrap.bundle.min.js',
+	'/js/popper.min.js',
+	'/js/tooltip.min.js',
+    '/js/jquery-3.5.1.slim.min.js',
+    '/js/bootstrap-table.min.js',
+    '/js/bootstrap-table-tr-TR.js',
 	'/css/bootstrap.css',
-	'/css/style.css',
-	'/css/bootstrap.js',
-	'/css/popper.min.js',
-	'/css/tooltip.min.js',
-	'/css/jquery-3.4.0.slim.min.js',
+    '/css/style.css',
+    '/css/bootstrap-table.min.css',
+	'/css/jquery.mCustomScrollbar.min.css',
 	'/img/icons/icon-384x384.png',
 	'/manifest.json',
     '/img/icons',
     '/img/splash'
 ];
-
-// install event
-// self.addEventListener('install', evt => {
-// 	console.log('service worker installed');
-// 	evt.waitUntil(
-// 		caches.open(staticCacheName).then(cache => {
-// 			console.log('caching shell assets');
-// 			cache.addAll(assets);
-// 		})
-// 	);
-// });
-
-// // activate event
-// self.addEventListener('activate', evt => {
-// 	console.log('service worker activated');
-// });
-
-// // fetch event
-// self.addEventListener('fetch', evt => {
-// 	console.log('fetch event', evt);
-// 	evt.respondWith(
-// 		caches.match(evt.request).then(cacheRes => {
-// 			return cacheRes || fetch(evt.request);
-// 		})
-// 	);
-// });
-
 
 self.addEventListener('install', async e => {
     const cache = await caches.open(staticCacheName);
