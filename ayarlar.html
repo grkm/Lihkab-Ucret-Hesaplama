@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="Description" content="Lisanslı Harita Kadastro Mühendislik Büroları (LİHKAB) için online ücret hesaplama web uygulaması">
+	<meta name="keywords" content="lihkab,lihkab ücret hesabı,lisanslı harita büroları,aplikasyon,cins değişikliği,
+	birleştirme,hatalı bağımsız bölüm düzeltme,yer gösterme,sınır tespiti,vaziyet planı,bağımsız bölüm planı,imar barışı,
+	zemin tespit tutanağı,röperli kroki,yol aplikasyonu,yapılı hale gelme,yapısız hale gelme,tarımsal cins değişikliği,
+	resmi kroki,imar durumu,harita,haritacı,harita mühendisi,netcad,pwa,javascript,css,html">
+	<meta name="google-site-verification" content="RawuIX_K_LmdfxvxeJuMPG_51CmEM_gMoLUPMMBhoSk" />
+	<meta name="msvalidate.01" content="40ECDEB375D1ADD006E2740FF008D7B5" />
+	<meta name="theme-color" content="#161a1f">
+	<!-- Apple iPhone/iPad Ayarlamaları -->
+	<link rel="icon" href="./img/icons/icon-384x384.png">
+	<link rel="apple-touch-icon" href="./img/icons/icon-172x172.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="./img/icons/icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="167x167" href="./img/icons/icon-167x167.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="./img/icons/icon-180x180.png">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<meta name="apple-mobile-web-app-title" content="Lihkab Ücret Hesabı">
+	<link rel="apple-touch-startup-image" href="./img/splash/launch-2048x2732.png" sizes="2048x2732"
+		media="(min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+	<link rel="apple-touch-startup-image" href="./img/splash/launch-1668x2224.png" sizes="1668x2224"
+		media="(min-device-width: 834px) and (max-device-width: 834px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+	<link rel="apple-touch-startup-image" href="./img/splash/launch-1536x2048.png" sizes="1536x2048"
+		media="(min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+	<link rel="apple-touch-startup-image" href="./img/splash/launch-1125x2436.png" sizes="1125x2436"
+		media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+	<link rel="apple-touch-startup-image" href="./img/splash/launch-1242x2148.png" sizes="1242x2208"
+		media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+	<link rel="apple-touch-startup-image" href="./img/splash/launch-750x1294.png" sizes="750x1334"
+		media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+	<link rel="apple-touch-startup-image" href="./img/splash/launch-640x1136.png" sizes="640x1136"
+		media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+	<link rel="mask-icon" href="./img/splash/safari-pinned-tab.svg" color="#6F6F6F">
+    <title>Lihkab Ücret Hesabı</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+    <!-- Font Awesome JS & CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.13.1/js/solid.js" integrity="sha384-81RFXCmeESYg4G/uFGo6Tu/eeK3klw0oKItW3nPhi2BuryJcE4lkOkwWsW6jzoNz" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.13.1/js/fontawesome.js" integrity="sha384-4NJBLvz0eHSgtSVDb+VOLh4cxmVluIBqCaNw97NvJAo18r+qV9pze1g4YnhB/X6Y" crossorigin="anonymous"></script>
+    
+    <!-- Bootstrap-Table CSS -->
+    <link rel="stylesheet" href="./css/bootstrap-table.min.css">
+    
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="./css/jquery.mCustomScrollbar.min.css">
+
+    <!-- Yedekle/Kurtar Js -->
+    <script type="text/javascript" src="./js/backup.js"></script>
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body onload="FormOnLoadAyarlar();" data-gr-c-s-loaded="true" style="background: #292727;">
+
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div id="dismiss">
+                <i class="fas fa-arrow-left"></i>
+            </div>
+            
+            <ul class="list-unstyled components">
+                <p>MENÜ</p>
+                <li>
+                    <a href="./index.html">Ana Sayfa</a>
+				</li>
+				<li class="active">
+                    <a href="./ayarlar.html">Ayarlar</a>
+                </li>
+                <li>
+                    <a href="./hakkinda.html">Hakkında</a>
+                </li>
+                <li>
+                    <a href="./iletisim.html">İletişim</a>
+                </li>
+            </ul>
+            
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-danger">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="ml-right">
+                        <h5>Lihkab Ücret Hesabı</h5>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="row">
+                    <!-- İçerik Kısmı Başlangıç -->
+                    <div class="col-lg-6 mx-auto">
+
+
+                        <!-- ayarlar sekmesi accordion kodu başlangıcı -->
+					<div class="accordion card card-blok my-5" id="accordionAyarlar">
+						<div class="card">
+							<div class="card-header" id="ayarlarOne">
+								<i class="fas fa-cogs fa-lg cardawesome"></i>
+								<button class="btn btn-link" type="button" data-toggle="collapse"
+									data-target="#ayarlar1" aria-expanded="false" aria-controls="ayarlar1">
+									Genel Uygulama Ayarları
+								</button>
+							</div>
+							<div id="ayarlar1" class="collapse" aria-labelledby="ayarlarOne"
+								data-parent="#accordionAyarlar">
+								<div class="card-body">
+									<!-- Genel Uygulama Ayarları Başlangıç -->
+									<div class="card-body">
+										<form method="post">
+											<div class="custom-control custom-checkbox mb-3">
+												<input class="custom-control-input" type="checkbox" value="ayarlarSozlesmeBedeliDurum" id="ayarlarSozlesmeBedeliDurum">
+												<label class="custom-control-label" for="ayarlarSozlesmeBedeliDurum">Sözleşme Bedeli Ekle</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="number" placeholder="Sözleşme Bedeli" id="ayarlarSozlesmeBedeli" name="ayarlarSozlesmeBedeli">
+												<label for="ayarlarSozlesmeBedeli">Sözleşme Bedeli</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="number" placeholder="Bölgesel Satın Alma Paritesi" id="ayarlarSehir" name="ayarlarSehir">
+												<label for="ayarlarSehir">Bölgesel Satın Alma Paritesi</label>
+											</div>
+											<div class="custom-control custom-checkbox mb-3">
+												<input class="custom-control-input" type="checkbox" value="ayarlarYuvarlamaDurum" id="ayarlarYuvarlamaDurum">
+												<label class="custom-control-label" for="ayarlarYuvarlamaDurum">Sonuçta Yuvarlama Yapılsın</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="number" placeholder="Yuvarlama Katı" id="ayarlarYuvarlama" name="ayarlarYuvarlama">
+												<label for="ayarlarYuvarlama">Yuvarlama Katı</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="number" placeholder="Onay-Damga Katsayı" id="ayarlarOnaydamga" name="ayarlarOnaydamga">
+												<label for="ayarlarOnaydamga">Onay-Damga Katsayı</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="number" placeholder="Belge Alımı Katsayı" id="ayarlarBelge" name="ayarlarBelge">
+												<label for="ayarlarBelge">Belge Alımı Katsayı</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="number" placeholder="Kontrollük Katsayı" id="ayarlarKontrolluk" name="ayarlarKontrolluk">
+												<label for="ayarlarKontrolluk">Kontrollük Katsayı</label>
+											</div>
+											<input type="button" onclick="genelayarkaydet();"
+											class="btn btn-lg btn-danger btn-block btn-login font-weight-bold mb-2"
+											value="Ayarları Kaydet" name="btngenelayarkaydet" id="btngenelayarkaydet">
+											<div class="hatagenelayar"></div>
+										  </form>
+									</div>
+									<!-- Genel Uygulama Ayarları Son -->
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-header" id="ayarlarTwo">
+								<i class="fas fa-cog fa-lg cardawesome"></i>
+								<button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+									data-target="#ayarlar2" aria-expanded="false" aria-controls="ayarlar2">
+									TKGM Ayarlar
+								</button>
+							</div>
+							<div id="ayarlar2" class="collapse" aria-labelledby="ayarlarTwo"
+								data-parent="#accordionAyarlar">
+								<div class="card-body">
+									<!--TKGM Ayarlar Başlangıç -->
+									<div class="card-body">
+										<!-- TKGM Ayarlar İçerik Kısmı Başlangıç -->
+										<form method="post">
+											<!-- Aplikasyon Başlangıç -->
+											<div class="text-center">Aplikasyon (KDV Dahil Fiyatlar)</div>
+											<p></p>
+											<div class="form-label-group">
+												<input class="form-control" type="number" placeholder="1-1000 m² arası" id="ayarlarApl1" name="ayarlarApl1">
+												<label for="ayarlarApl1">1-1000 m² arası</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="number" placeholder="1001-3000 m² arası" id="ayarlarApl2" name="ayarlarApl2">
+												<label for="ayarlarApl2">1001-3000 m² arası</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="number" placeholder="3001-5000 m² arası" id="ayarlarApl3" name="ayarlarApl3">
+												<label for="ayarlarApl3">3001-5000 m² arası</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="number" placeholder="5001-10000 m² arası" id="ayarlarApl4" name="ayarlarApl4">
+												<label for="ayarlarApl4">5001-10000 m² arası</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="number" placeholder="10001-20000 m² arası" id="ayarlarApl5" name="ayarlarApl5">
+												<label for="ayarlarApl5">10001-20000 m² arası</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="number" placeholder="20001-50000 m² arası" id="ayarlarApl6" name="ayarlarApl6">
+												<label for="ayarlarApl6">20001-50000 m² arası</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="number" placeholder="50001-100000 m² arası" id="ayarlarApl7" name="ayarlarApl7">
+												<label for="ayarlarApl7">50001-100000 m² arası</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="number" placeholder="100001-200000 m² arası" id="ayarlarApl8" name="ayarlarApl8">
+												<label for="ayarlarApl8">100001-200000 m² arası</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="number" placeholder="200001-500000 m² arası" id="ayarlarApl9" name="ayarlarApl9">
+												<label for="ayarlarApl9">200001-500000 m² arası</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="number" placeholder="500000 m²'den sonra her 100000 m² için" id="ayarlarApl10" name="ayarlarApl10">
+												<label for="ayarlarApl10">500000 m²'den sonra her 100000 m² için</label>
+											</div>
+											<!-- Aplikasyon Son -->
+											
+											<!-- Kadastral Yol Sınırlarının Belirlenmesi ( Maktu ) Başlangıç -->
+											<p></p>
+											<div class="text-center">Yol Aplikasyonu (KDV Dahil Fiyatlar)</div>
+											<p></p>
+											<div class="form-label-group">
+												<input class="form-control" type="number" placeholder="1-10 nokta için" id="ayarlarAply1" name="ayarlarAply1">
+												<label for="ayarlarAply1">1-10 nokta için</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="number" placeholder="10 noktadan sonra her bir nokta için" id="ayarlarAply2" name="ayarlarAply2">
+												<label for="ayarlarAply2">10 noktadan sonra her bir nokta için</label>
+											</div>
+											<!-- Kadastral Yol Sınırlarının Belirlenmesi Son -->
+											
+											<!-- Cins Değişikliği Başlangıç -->
+											<p></p>
+											<div class="text-center">Cins Değişikliği (KDV Dahil Fiyatlar)</div>
+											<p></p>
+											<div class="text-center">Yapılı Hale Gelme</div>
+											<p></p>
+											<div class="form-label-group">
+												<input class="form-control" type="number" placeholder="Bina taban alanı 0-500 m² için" id="ayarlarCins1" name="ayarlarCins1">
+												<label for="ayarlarCins1">Bina taban alanı 0-500 m² için</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="number" placeholder="Sonraki her 1 m² için" id="ayarlarCins2" name="ayarlarCins2">
+												<label for="ayarlarCins2">Sonraki her 1 m² için</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="number" placeholder="İlave her bina için" id="ayarlarCins3" name="ayarlarCins3">
+												<label for="ayarlarCins3">İlave her bina için</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="number" placeholder="Aynı yapı kat ilavesi" id="ayarlarCins4" name="ayarlarCins4">
+												<label for="ayarlarCins4">Aynı yapı kat ilavesi</label>
+											</div>
+											<p></p>
+											<div class="text-center">Yapısız Hale Gelme</div>
+											<p></p>
+											<div class="form-label-group">
+												<input class="form-control" type="number" placeholder="Yapısız hale gelme" id="ayarlarCins5" name="ayarlarCins5">
+												<label for="ayarlarCins5">Yapısız hale gelme</label>
+											</div>
+											<p></p>
+											<div class="text-center">Tarımsal/Tarla-Arsa</div>
+											<p></p>
+											<div class="form-label-group">
+												<input class="form-control" type="number" placeholder="Bina yapımı ve yıkımı olmayanlar" id="ayarlarCins6" name="ayarlarCins6">
+												<label for="ayarlarCins6">Bina yapımı ve yıkımı olmayanlar</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="number" placeholder="Araziye gidilmesi gerekiyorsa" id="ayarlarCins7" name="ayarlarCins7">
+												<label for="ayarlarCins7">Araziye gidilmesi gerekiyorsa</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="number" placeholder="Tarımsal yapı tavan fiyat" id="ayarlarCins8" name="ayarlarCins8">
+												<label for="ayarlarCins8">Tarımsal yapı tavan fiyat</label>
+											</div>
+											<!-- Cins Değişikliği Son -->
+											
+											<!-- Birleştirme Başlangıç -->
+											<p></p>
+											<div class="text-center">Birleştirme (KDV Dahil Fiyatlar)</div>
+											<p></p>
+											<div class="form-label-group">
+												<input class="form-control" type="number" placeholder="2 Parsel için" id="ayarlarBirl1" name="ayarlarBirl1">
+												<label for="ayarlarBirl1">2 Parsel için</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="number" placeholder="İlave her parsel için %" id="ayarlarBirl2" name="ayarlarBirl2">
+												<label for="ayarlarBirl2">İlave her parsel için %</label>
+											</div>
+											<!-- Birleştirme Son -->
+											
+											<!-- İrtifak Hakkı Başlangıç -->
+											<p></p>
+											<div class="text-center">İrtifak Hakkı (KDV Dahil Fiyatlar)</div>
+											<p></p>
+											<div class="form-label-group">
+												<input class="form-control" type="number" placeholder="2 Parsel için" id="ayarlarIrt1" name="ayarlarIrt1">
+												<label for="ayarlarIrt1">2 Parsel için</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="number" placeholder="İlave her parsel için" id="ayarlarIrt2" name="ayarlarIrt2">
+												<label for="ayarlarIrt2">İlave her parsel için</label>
+											</div>
+											<!-- İrtifak Hakkı Son -->
+											
+											<!-- Hatalı Bağımsız Bölüm Düzeltme İşlemi Teknik Rapor Hazırlama Başlangıç -->
+											<p></p>
+											<div class="text-center">Bağımsız Bölüm Düzeltme (KDV Dahil Fiyatlar)</div>
+											<p></p>
+											<div class="form-label-group">
+												<input class="form-control" type="number" placeholder="2 bağ. böl. için" id="ayarlarBbd1" name="ayarlarBbd1">
+												<label for="ayarlarBbd1">2 bağ. böl. için</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="number" placeholder="İlave her bağ. böl. için" id="ayarlarBbd2" name="ayarlarBbd2">
+												<label for="ayarlarBbd2">İlave her bağ. böl. için</label>
+											</div>
+											<!-- Hatalı Bağımsız Bölüm Düzeltme İşlemi Teknik Rapor Hazırlama Son -->
+											
+											<!-- Zemin Tespit Tutanağı Başlangıç -->
+											<p></p>
+											<div class="text-center">İmar Barışı (KDV Dahil Fiyatlar)</div>
+											<p></p>
+											<div class="form-label-group">
+												<input class="form-control" type="number" placeholder="Taban alanı 0-100" id="ayarlarZtt1" name="ayarlarZtt1">
+												<label for="ayarlarZtt1">Taban alanı 0-100</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="number" placeholder="İlave her 1 m² için" id="ayarlarZtt2" name="ayarlarZtt2">
+												<label for="ayarlarZtt2">İlave her 1 m² için</label>
+											</div>
+											<!-- Zemin Tespit Tutanağı Son -->
+
+											<!-- Hesaplanacak En Az Ücret Başlangıç -->
+											<p></p>
+											<div class="text-center">Hesaplanacak En Az Ücret</div>
+											<p></p>
+											<div class="form-label-group">
+												<input class="form-control" type="number" placeholder="En Az Ücret" id="ayarlarEnAzUcret" name="ayarlarEnAzUcret">
+												<label for="ayarlarEnAzUcret">En Az Ücret</label>
+											</div>
+											<!-- Hesaplanacak En Az Ücret Son -->
+
+											<!-- Röperli Kroki Ayarlar Başlangıç -->
+											<p></p>
+											<div class="text-center">Röperli Kroki</div>
+											<p></p>
+											<div class="form-label-group">
+												<input class="form-control" type="number" placeholder="Aplikasyona Ek" id="ayarlarRpr1" name="ayarlarRpr1">
+												<label for="ayarlarRpr1">Aplikasyona Ek</label>
+											</div>
+											<!-- Röperli Kroki Ayarlar Son -->
+
+											<!-- Kaydet Buttonu -->
+											<p></p>
+											<input type="button" onclick="tkgmayarkaydet();"
+											class="btn btn-lg btn-danger btn-block btn-login font-weight-bold mb-2"
+											value="Ayarları Kaydet" name="btntkgmayarkaydet" id="btntkgmayarkaydet">
+											
+											<div class="hatatkgmayar"></div>
+											
+										</form>
+										<!-- TKGM Ayarlar İçerik Kısmı Son -->
+
+									</div>
+									<!-- TKGM Ayarlar Son -->
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-header" id="ayarlarThree">
+								<i class="fas fa-cog fa-lg cardawesome"></i>
+								<button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+									data-target="#ayarlar3" aria-expanded="false" aria-controls="ayarlar3">
+									HKMO Ayarlar
+								</button>
+							</div>
+							<div id="ayarlar3" class="collapse" aria-labelledby="ayarlarThree"
+								data-parent="#accordionAyarlar">
+								<div class="card-body">
+									<!-- HKMO Ayarlar Başlangıç -->
+									<div class="card-body">
+										<!-- HKMO Ayarlar İçerik Başlangıç -->
+
+										<form method="post">
+											<!-- Vaziyet-Bağımsız Ayarlar Başlangıç -->
+											<div class="text-center">Vaziyet-Bağımsız</div>
+											<p></p>
+											<div class="form-label-group">
+												<input class="form-control" type="number" placeholder="Alan 0-500" id="ayarlarVbp1" name="ayarlarVbp1">
+												<label for="ayarlarVbp1">Alan 0-500</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="number" placeholder="Alan 501-1000" id="ayarlarVbp2" name="ayarlarVbp2">
+												<label for="ayarlarVbp2">Alan 501-1000</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="number" placeholder="Alan 1001-2500" id="ayarlarVbp3" name="ayarlarVbp3">
+												<label for="ayarlarVbp3">Alan 1001-2500</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="number" placeholder="Alan 2501-10000" id="ayarlarVbp4" name="ayarlarVbp4">
+												<label for="ayarlarVbp4">Alan 2501-10000</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="number" placeholder="Alan 10000" id="ayarlarVbp5" name="ayarlarVbp5">
+												<label for="ayarlarVbp5">Alan 10000</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="number" placeholder="Bina için" id="ayarlarVbp6" name="ayarlarVbp6">
+												<label for="ayarlarVbp6">Bina için</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="number" placeholder="Her kat için" id="ayarlarVbp7" name="ayarlarVbp7">
+												<label for="ayarlarVbp7">Her kat için</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="number" placeholder="Bağ. Böl. için" id="ayarlarVbp8" name="ayarlarVbp8">
+												<label for="ayarlarVbp8">Bağ. Böl. için</label>
+											</div>
+											<!-- Vaziyet-Bağımsız Ayarlar Son -->
+
+											<!-- Röperli Kroki Ayarlar HKMO Başlangıç
+											<p></p>
+											<div class="text-center">Röperli Kroki</div>
+											<p></p>
+											<div class="form-label-group">
+												<input class="form-control" type="number" placeholder="Aplikasyona Ek" id="ayarlarRpr1" name="ayarlarRpr1">
+												<label for="ayarlarRpr1">Aplikasyona Ek</label>
+											</div>
+											Röperli Kroki Ayarlar HKMO Son -->
+
+											<!-- Kaydet Buttonu -->
+											<p></p>
+											<input type="button" onclick="hkmoayarkaydet();"
+											class="btn btn-lg btn-danger btn-block btn-login font-weight-bold mb-2"
+											value="Ayarları Kaydet" name="btnhkmoayarkaydet" id="btnhkmoayarkaydet">
+											
+											<div class="hatahkmoayar"></div>
+											
+										</form>
+
+										<!-- HKMO Ayarlar İçerik Son -->
+									</div>
+									<!-- HKMO Ayarlar Son -->
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-header" id="ayarlarFour">
+								<i class="fas fa-road fa-lg cardawesome"></i>
+								<button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+									data-target="#ayarlar4" aria-expanded="false" aria-controls="ayarlar4">
+									Mahalle Ücreti Ayarları
+								</button>
+							</div>
+							<div id="ayarlar4" class="collapse" aria-labelledby="ayarlarFour"
+								data-parent="#accordionAyarlar">
+								<div class="card-body">
+									<!-- Mahalle Ücreti Başlangıç -->
+									<div class="card-body">
+										<form method="post">
+											<div class="form-label-group">
+												<input class="form-control" type="number" placeholder="Yakıt Lt Fiyatı" id="ayarlarYakitlt" name="ayarlarYakitlt">
+												<label for="ayarlarYakitlt">Yakıt Lt Fiyatı</label>
+											</div>
+											<div class="form-label-group">
+												<input class="form-control" type="number" placeholder="Yakıt Km Katsayı" id="ayarlarYakitkm" name="ayarlarYakitkm">
+												<label for="ayarlarYakitkm">Yakıt Km Katsayı</label>
+											</div>
+											<div class="form-label-group">
+												<select class="form-control" id="mahallehesapyontemi" name="mahallehesapyontemi"
+													class="form-control" placeholder="Mahalle Ücret Hesaplama Yöntemi" required autofocus>
+													<option value="Ücret Verisiyle Hesaplama">Ücret Verisiyle Hesaplama</option>
+													<option value="Km Verisiyle Hesaplama">Km Verisiyle Hesaplama</option>
+												</select>
+											</div>
+											<div class="form-group">
+												<label for="jsontextarea">İlçe-Mahalle-Ücret Verisi</label>
+												<textarea rows="10" class="form-control" name="jsontextarea" id="jsontextarea"></textarea>
+											  </div>
+											  <p></p>
+											<div class="text-right" style="margin-bottom:10px;">
+												<a href="./ornek.json">Örnek Json Formatı için Tıklayınız</a>
+											</div>
+											
+												<input type="button" onclick="mahalleayarkaydet();"
+											class="btn btn-lg btn-danger btn-block btn-login font-weight-bold mb-2"
+											value="Ayarları Kaydet" name="btnmahalleayarkaydet" id="btnmahalleayarkaydet">
+											
+											<div class="hatamahalleayar"></div>
+										</form>
+										
+									</div>
+									<!-- Mahalle Ücreti Son -->
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-header" id="ayarlarFive">
+								<i class="fas fa-download fa-lg cardawesome"></i>
+								<button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+									data-target="#ayarlar5" aria-expanded="false" aria-controls="ayarlar5">
+									Yedekle/Kurtar
+								</button>
+							</div>
+							<div id="ayarlar5" class="collapse" aria-labelledby="ayarlarFive"
+								data-parent="#accordionAyarlar">
+								<div class="card-body">
+									<!-- Yedekle/Kurtar Başlangıç -->
+									<div class="card-body">
+										<div class="text-center">NOT: Uygulama ayarları kaydetmek için localstorage kullanmaktadır.
+											Dolayısıyla kullandığınız tarayıcının localstorage özelliği yok ise uygulama çalışmayacaktır. 
+											Ayrıca tarayıcı geçmişinizi silerseniz kayıtlı ayarlarınız kaybolacağı için kendi 
+											yedeklerinizi bu kısmı kullanarak alabilir. Yedeklerinizi sisteme tanımlayabilirsiniz.</div>
+										<div class="text-center"><a class="backup btn-block" href="#" data-function="localStorageBackup">Yedekle</a></div>
+										<div class="text-center"><a class="backup btn-block" href="#" data-function="localStorageRestore">Kurtar</a></div>
+										<div class="text-center"><a class="backup btn-block" href="#" data-function="localStorageClear">Herşeyi Sil</a></div>
+										<div class="text-center">2020 yılına ait 0.99 Bölgesel Katsayı için tanımlı ayarları yüklemek için aşağıdaki button'u kullanabilirsiniz.</div>
+										<div class="text-center"><a class="backup btn-block" href="#" data-function="urldenyukle">Tanımlı Ayar Yükle</a></div>
+									</div>
+									<!-- Yedekle/Kurtar Son -->
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- ayarlar sekmesi accordion kodu sonu -->
+
+
+                    </div>
+                    <!-- İçerik Kısmı Son -->
+            </div>
+			<div class="line"></div>
+			<div class="text-center gorkemtabak">2020 ~ Görkem Tabak</div>
+            <div class="text-center gorkemtabak">gorkemtabak@gmail.com</div>
+        </div>
+    </div>
+
+    <div class="overlay"></div>
+        
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="./js/jquery-3.5.1.slim.min.js"></script>
+    <!-- Popper.JS -->
+    <script src="./js/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="./js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!-- Tooltip -->
+    <script src="./js/tooltip.min.js"></script>
+    <!-- Bootstrap Table -->
+    <script src="./js/bootstrap-table.min.js"></script>
+    <script src="./js/bootstrap-table-tr-TR.js"></script>
+    <!-- PWA Ayarları -->
+    <script src="./js/app.js"></script>
+    <!-- Ücret hesabı fonksiyonları -->
+	<script src="./js/hesaplamalar.js"></script>
+	
+    <!-- Sidebar için gerekli fonksiyonlar -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#sidebar").mCustomScrollbar({
+                theme: "minimal"
+            });
+
+            $('#dismiss, .overlay').on('click', function () {
+                $('#sidebar').removeClass('active');
+                $('.overlay').removeClass('active');
+            });
+
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').addClass('active');
+                $('.overlay').addClass('active');
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
