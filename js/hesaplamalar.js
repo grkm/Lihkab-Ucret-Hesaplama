@@ -331,15 +331,15 @@ function vazbagbrut(){
     vazbagilcekatsayisi = Number(document.getElementById("ilcekatsayisivazbag").value);
     //vazbagilcekatsayisi = 1;
     vbpkatsayi = 1;
-    ayarvbp1 = 715; // 0 - 500 m 2
-    ayarvbp2 = 47; // 501 -1000 m 2 ‘ye kadar her 100 m 2 için
-    ayarvbp3 = 31; // 1001 - 2500 m 2 ‘ye kadar her 100 m 2 için
-    ayarvbp4 = 12; // 2501 - 10.000 m 2 ’ye kadar her 100 m 2 için
-    ayarvbp5 = 6; // 10.000 m 2 ‘den sonraki her 1000 m 2 için
-    ayarvbp6 = 230; // Aynı parsel içerisinde her fazla bina için
+    ayarvbp1 = Number(localStorage.getItem("ayarVbp1")); // 0 - 500 m 2
+    ayarvbp2 = Number(localStorage.getItem("ayarVbp2")); // 501 -1000 m 2 ‘ye kadar her 100 m 2 için
+    ayarvbp3 = Number(localStorage.getItem("ayarVbp3")); // 1001 - 2500 m 2 ‘ye kadar her 100 m 2 için
+    ayarvbp4 = Number(localStorage.getItem("ayarVbp4")); // 2501 - 10.000 m 2 ’ye kadar her 100 m 2 için
+    ayarvbp5 = Number(localStorage.getItem("ayarVbp5")); // 10.000 m 2 ‘den sonraki her 1000 m 2 için
+    ayarvbp6 = Number(localStorage.getItem("ayarVbp6")); // Aynı parsel içerisinde her fazla bina için
     // (Her binanın her katı ve her bağımsız bölümleri için aşağıdaki bedeller ilave edilir.)
-    ayarvbp7 = 36; // Binanın her katı için
-    ayarvbp8 = 21; // Binadaki her bağımsız bölüm için
+    ayarvbp7 = Number(localStorage.getItem("ayarVbp7")); // Binanın her katı için
+    ayarvbp8 = Number(localStorage.getItem("ayarVbp8")); // Binadaki her bağımsız bölüm için
 
     vazbagtaksdurum = document.getElementById("taksvazbag");
 
@@ -373,17 +373,36 @@ function vazbagbrut(){
     }
     else { vazbagsonuc = ayarvbp1; }
 
-    console.log(vazbagsonuc);
-    console.log(vazbagilcekatsayisi);
     vazbagsonuc = vazbagilcekatsayisi*vbpkatsayi*(vazbagsonuc + vazbagilavebinasayisi*ayarvbp6+vazbagbinakatsayisi*ayarvbp7+vazbagbbsayisi*ayarvbp8); 
-    console.log(vazbagsonuc);
 
     vazbagsonuc = yuvarla(vazbagsonuc, 2);
     document.getElementById('brutvazbag').innerHTML=vazbagsonuc;
 
 }
+function FormOnLoadAnaSayfa() {
+    if (typeof(Storage) != "undefined") {
 
-function FormOnLoad() {
+        urldenlocalstoragekontrol();
+
+        document.getElementById("brutyapisizcins").innerHTML=yuvarla((Number(localStorage.getItem("ayarCins5"))/1.18),2);
+        document.getElementById("brutvasifcins").innerHTML=yuvarla((Number(localStorage.getItem("ayarCins6"))/1.18),2);
+        document.getElementById("brutvasifarazicins").innerHTML=yuvarla(((Number(localStorage.getItem("ayarCins7"))+Number(localStorage.getItem("ayarCins6")))/1.18),2);
+        document.getElementById("brutkatilavesicins").innerHTML=yuvarla((Number(localStorage.getItem("ayarCins4"))/1.18),2);
+        
+        var deneme = localStorage.getItem("ayarMahalleyontem");
+        if(deneme == "ucret"){
+            document.getElementById('kmucretsecilen').innerHTML="ÜCRET";
+            }
+        else if(deneme == "km"){
+            document.getElementById('kmucretsecilen').innerHTML="KM";
+        }
+        else{document.getElementById('kmucretsecilen').innerHTML="KM/ÜCRET";}
+    } 
+    else {
+        
+    } 
+}
+function FormOnLoadAyarlar() {
     if (typeof(Storage) != "undefined") {
         //console.log(localStorage.length);
         urldenlocalstoragekontrol();
@@ -400,6 +419,28 @@ function FormOnLoad() {
         document.getElementById("ayarlarKontrolluk").value = localStorage.getItem("ayarKontrolluk");
         document.getElementById("ayarlarYakitlt").value = localStorage.getItem("ayarYakitlt");
         document.getElementById("ayarlarYakitkm").value = localStorage.getItem("ayarYakitkm");
+        document.getElementById("jsontextarea").value = localStorage.getItem("ayarjsontextarea");
+        
+        var deneme = localStorage.getItem("ayarMahalleyontem");
+        function setSelectedIndex(s, valsearch){
+                // Loop through all the items in drop down list
+                for (i = 0; i< s.options.length; i++){ 
+                    if (s.options[i].value == valsearch){
+                    // Item is found. Set its property and exit
+                    s.options[i].selected = true;
+                    break;
+                    }
+                }
+                return;
+            }
+
+        if(deneme == "ucret"){
+                setSelectedIndex(document.getElementById("mahallehesapyontemi"),"Ücret Verisiyle Hesaplama");
+            }
+        if(deneme == "km"){
+                setSelectedIndex(document.getElementById("mahallehesapyontemi"),"Km Verisiyle Hesaplama");
+        }
+        else{setSelectedIndex(document.getElementById("mahallehesapyontemi"),"Ücret Verisiyle Hesaplama");}
 
         // TKGM Ayarlarının Yüklenmesi
         document.getElementById("ayarlarApl1").value=localStorage.getItem("ayarApl1");
@@ -443,10 +484,6 @@ function FormOnLoad() {
         document.getElementById("ayarlarVbp7").value=localStorage.getItem("ayarVbp7");
         document.getElementById("ayarlarVbp8").value=localStorage.getItem("ayarVbp8");
 
-        document.getElementById("brutyapisizcins").innerHTML=yuvarla((Number(localStorage.getItem("ayarCins5"))/1.18),2);
-        document.getElementById("brutvasifcins").innerHTML=yuvarla((Number(localStorage.getItem("ayarCins6"))/1.18),2);
-        document.getElementById("brutvasifarazicins").innerHTML=yuvarla(((Number(localStorage.getItem("ayarCins7"))+Number(localStorage.getItem("ayarCins6")))/1.18),2);
-        document.getElementById("brutkatilavesicins").innerHTML=yuvarla((Number(localStorage.getItem("ayarCins4"))/1.18),2);
     } 
     else {
         
@@ -463,8 +500,6 @@ function genelayarkaydet() {
     onaydamagaKatsayi=document.getElementById("ayarlarOnaydamga").value;
     belgeKatsayi=document.getElementById("ayarlarBelge").value;
     kontrollukKatsayi=document.getElementById("ayarlarKontrolluk").value;
-    yakitltKatsayi=document.getElementById("ayarlarYakitlt").value;
-    yakitkmKatsayi=document.getElementById("ayarlarYakitkm").value;
 
     // Eğer Browserın desteği yoksa hata verecek
     if (typeof(Storage) != "undefined") {
@@ -478,8 +513,6 @@ function genelayarkaydet() {
         localStorage.setItem("ayarOnaydamga", onaydamagaKatsayi);
         localStorage.setItem("ayarBelge", belgeKatsayi);
         localStorage.setItem("ayarKontrolluk", kontrollukKatsayi);
-        localStorage.setItem("ayarYakitlt", yakitltKatsayi);
-        localStorage.setItem("ayarYakitkm", yakitkmKatsayi);
     } else {
         document.getElementById("hatagenelayar").innerHTML = "Tarayıcınızda Local Storage Özelliği Bulunmadığı için bunu kullanamazsınız!!!";
     }
@@ -585,5 +618,30 @@ function hkmoayarkaydet() {
     }
     else {
         document.getElementById("hatahkmoayar").innerHTML = "Tarayıcınızda Local Storage Özelliği Bulunmadığı için bunu kullanamazsınız!!!";
+    }
+}
+
+function mahalleayarkaydet(jsontextarevar){
+    jsontextarevar=document.getElementById("jsontextarea").value;
+    yakitltKatsayi=document.getElementById("ayarlarYakitlt").value;
+    yakitkmKatsayi=document.getElementById("ayarlarYakitkm").value;
+    mahallehesapyontemivar=document.getElementById("mahallehesapyontemi").value;
+
+    if (mahallehesapyontemivar == "Ücret Verisiyle Hesaplama"){
+        mahallehesapyontemivar ="ucret";
+    }
+    if (mahallehesapyontemivar == "Km Verisiyle Hesaplama"){
+        mahallehesapyontemivar="km";
+    }
+
+    // Eğer Browserın desteği yoksa hata verecek
+    if (typeof(Storage) != "undefined") {
+        // Verileri Depolama
+        localStorage.setItem("ayarMahalleyontem", mahallehesapyontemivar);
+        localStorage.setItem("ayarYakitlt", yakitltKatsayi);
+        localStorage.setItem("ayarYakitkm", yakitkmKatsayi);
+        localStorage.setItem("ayarjsontextarea", jsontextarevar);
+    } else {
+        document.getElementById("hatamahalleayar").innerHTML = "Tarayıcınızda Local Storage Özelliği Bulunmadığı için bunu kullanamazsınız!!!";
     }
 }
