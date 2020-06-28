@@ -14,6 +14,14 @@
 
 #### En Son Yapılana Eklemeler-Güncellemeler
 
+##### 28.06.2020
+```
+Tasarım değişikliği
+Mahalle(Yol) Ücreti json olarak eklenebilir
+Yöntem olarak ayarlardan km veya direk ücret seçilip ona göre işlem yapma
+KM bilgisi girilip yol ücreti hesaplama ( KM * Yakit Lt Fiyatı * 0,15 )
+```
+
 ##### 10.06.2020
 ```
 Sistem otomatik tanımlı ayarları yüklüyor
