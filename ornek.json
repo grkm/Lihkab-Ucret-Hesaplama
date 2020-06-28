@@ -1,0 +1,32 @@
+[
+  {
+    "ilce": "ÖRNEKİLÇE1",
+    "mahalle": "Mahalle1",
+    "kmucret": 10
+  },
+  {
+    "ilce": "ÖRNEKİLÇE1",
+    "mahalle": "Mahalle2",
+    "kmucret": 40
+  },
+  {
+    "ilce": "ÖRNEKİLÇE2",
+    "mahalle": "Mahalle3",
+    "kmucret": 70
+  },
+  {
+    "ilce": "ÖRNEKİLÇE2",
+    "mahalle": "Mahalle4",
+    "kmucret": 100
+  },
+  {
+    "ilce": "ÖRNEKİLÇE2",
+    "mahalle": "Mahalle5",
+    "kmucret": 130
+  },
+  {
+    "ilce": "ÖRNEKİLÇE3",
+    "mahalle": "Mahalle6",
+    "kmucret": 160
+  }
+]
